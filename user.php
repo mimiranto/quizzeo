@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrateur</title>
+    <title>Liste Utilisateurs</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,6 +14,12 @@
             background-size: cover;
             background-attachment: fixed;
          
+        }
+        h1{
+            text-align: center;
+            margin-top: 85px;
+            margin-bottom: 70px;
+            color: white;
         }
  
         nav {
@@ -69,19 +75,63 @@
             align-items: center;
             margin-top: 25vh;
         }
+        form{
+        display: flex;
+        justify-content: space-between;
+        margin: 1%;
+        padding: 1%;
+        border: solid 2px black;
+        width: 85%;
+        margin-left: 100px;
+        border-radius: 15px;
+        background-color:#cacadaf5;
+        box-shadow: 5px 5px 10px;
+        transition: transform 0.3s ease;
+    }
+    form:hover {
+         transform: scale(1.05);
+        }
+    form p{
+     font-size: 10px;
+     color: white;
+    }
         </style>
 </head>
 <body>
     <nav> 
         <div id="contenu"> 
             <div> 
-                <img class="logo" src="Asset/quizzeo.png"> 
+                <a href='./indexadmin.php'><img class="logo" src="Asset/quizzeo.png"></a>
             </div>
             <div class='log'> 
-             <a href="./user.php" id="inscription">Voir tout les Utilisateurs</a>
              <a href="./index.php" id="inscription">Deconnexion</a> 
             </div>
         </div>
     </nav>
+
+    <h1>Liste Utilisateurs</h1>
+    <?php
+    session_start(); 
+
+    $file=fopen("user.csv","r"); 
+
+    
+    while (($line = fgetcsv($file)) !== false) { 
+    
+        ?>
+        <form action="" method="post"> 
+            <p><?php echo $line[0]; ?></p> 
+            <p><?php echo $line[3]; ?></p> 
+            <p><?php echo $line[4]; ?></p> 
+            <div class='supp'>
+                <input type="submit" name="action" id='sup' value="Supprimer"> 
+            </div> 
+        </form>
+        <?php
+    }
+
+
+fclose($file); 
+?>
 </body>
 </html>
