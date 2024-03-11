@@ -11,9 +11,26 @@ if (isset($_POST['id']) && isset($_POST['mdp'])) {
         while (($line = fgetcsv($file)) !== false) {
             if ($line[2] === $_POST['id']) {
                 if ($_POST['mdp'] === $line[3]) {
-                    fclose($file);
-                    header('Location: ./index1.php');
-                    exit(); 
+                    if($line[0] === 'admin'){
+                     fclose($file);
+                     header('Location: ./indexadmin.php');
+                     exit();
+                    }
+                    else if($line[0] === 'Entreprise'){
+                     fclose($file);
+                     header('Location: ./indexentreprise.php');
+                     exit(); 
+                    }
+                    else if($line[0] === 'Ecole'){
+                        fclose($file);
+                        header('Location: ./indexecole.php');
+                        exit(); 
+                    }
+                    else{
+                     fclose($file);
+                     header('Location: ./indexuser.php');
+                     exit(); 
+                    }
                 }
             }
         }

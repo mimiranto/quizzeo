@@ -1,2 +1,5 @@
 choix,prenom,nom,id,mdp,mail
-user,admin,admin,admin,admin,admin@admin
+admin,admin,admin,admin,admin,admin@admin
+Entreprise,test1,test1,test1,test1,test1@test1
+Ecole,test2,test2,test2,test2,test2@test
+user,test3,test3,test3,test3,test3@test

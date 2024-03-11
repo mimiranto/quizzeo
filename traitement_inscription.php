@@ -14,13 +14,11 @@
             fputcsv($file, ['choix','prenom', 'nom', 'id', 'mdp','mail',]);
         }
     
-        // Écriture des données reçues dans le fichier CSV
         fputcsv($file, [$_POST['choix'], $_POST['nom'], $_POST['prenom'], $_POST['id'], $_POST['mdp'],$_POST['mail']]);
-    
-        // Fermeture du fichier
+
+
         fclose($file);
     
-        // Redirection vers la page de connexion
         header('location: ./login.php');
     }
 ?>
