@@ -31,8 +31,9 @@
             
         }
         nav img{
-            width:100px;
+            width:13vw;
             text-align: center;
+            margin-top:18px;
         }
         .log{
             margin-top: 13px;
@@ -61,9 +62,12 @@
         #txt{
             color:white;
             font-family:Impact,fantasy;
-            font-weight: bold;
+            font-size:20px;
             display:flex;
             justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25vh;
         }
     </style>
 </head>
@@ -72,7 +76,7 @@
     <nav> <!-- Balise de navigation -->
         <div id="contenu"> <!-- Conteneur de la barre de navigation -->
             <div> <!-- Première partie de la barre de navigation : logo -->
-                <img class="logo" src="assets/quizzeo.png"> <!-- Logo -->
+                <img class="logo" src="Asset/quizzeo.png"> <!-- Logo -->
             </div>
             <div class='log'> <!-- Deuxième partie de la barre de navigation : liens d'inscription et de connexion -->
                 <a href="./inscription.php" id="inscription">Inscription</a> <!-- Lien vers la page d'inscription -->
@@ -81,7 +85,19 @@
         </div>
     </nav>
  
-   <h1 id="txt">Créez ou participez aux meilleurs quizz</h1>
+    <div id="txt">
+                <h2>Tu es à l'accueil, tu peux te connecter ou t'inscrire !</h2>
+                <br>
+                <br>
+                <h3>
+                    Quizzeo est une plateforme de quizz en ligne. Le site vous permet de s’inscrire et de choisir si vous êtes utilisateur ou quizzeur, puis de vous connecter.
+                    <br>
+                    <br>
+                    Une fois votre compte créé vous pourrez jouer à des quizzs ou bien créer vos propres quizz en fonction de votre grade.
+                    <br>
+                    <br>
+                </h3>   
+    </div>
  
  
 </body>
