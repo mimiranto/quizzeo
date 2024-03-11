@@ -622,7 +622,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
                 </form>
             </div>
             <div class="signup-image"> 
-                <figure><a href='./index.php'><img src="Asset/quizzeo.png" alt="sign up image"></a></figure> 
+                <figure><a href='./index.php'><img src="asset/quizzeo.png" alt="sign up image"></a></figure> 
                 <a href="./inscription.php" class="signup-image-link">Inscription</a> 
             </div>
         </div>

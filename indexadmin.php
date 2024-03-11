@@ -75,7 +75,7 @@
     <nav> 
         <div id="contenu"> 
             <div> 
-                <img class="logo" src="Asset/quizzeo.png"> 
+                <img class="logo" src="asset/quizzeo.png"> 
             </div>
             <div class='log'> 
              <a href="./user.php" id="inscription">Voir tout les Utilisateurs</a>
@@ -83,5 +83,26 @@
             </div>
         </div>
     </nav>
+    
+    <?php
+    session_start(); 
+
+    $file=fopen("quizz.csv","r"); 
+
+    
+    while (($line = fgetcsv($file)) !== false) { 
+    
+        ?>
+        <form action="" method="post"> 
+            <p><?php echo $line[0]; ?></p> 
+            <img src= "<?php echo $line[1]; ?>"> 
+        </form>
+        <?php
+    }
+
+
+fclose($file); 
+?>
+    
 </body>
 </html>

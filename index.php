@@ -76,7 +76,7 @@
     <nav> <!-- Balise de navigation -->
         <div id="contenu"> <!-- Conteneur de la barre de navigation -->
             <div> <!-- Première partie de la barre de navigation : logo -->
-                <img class="logo" src="Asset/quizzeo.png"> <!-- Logo -->
+                <img class="logo" src="asset/quizzeo.png"> <!-- Logo -->
             </div>
             <div class='log'> <!-- Deuxième partie de la barre de navigation : liens d'inscription et de connexion -->
                 <a href="./inscription.php" id="inscription">Inscription</a> <!-- Lien vers la page d'inscription -->

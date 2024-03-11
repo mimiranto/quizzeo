@@ -71,7 +71,7 @@
     <nav> 
         <div id="contenu"> 
             <div> 
-                <img class="logo" src="Asset/quizzeo.png"> 
+                <img class="logo" src="asset/quizzeo.png"> 
             </div>
             <div class='log'> 
                 <a href="./index.php" id="inscription">Deconnexion</a> 
