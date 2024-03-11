@@ -101,7 +101,7 @@
         .container {
             position: relative;
             white-space: nowrap;
-            margin-bottom: 20px;
+            margin-top:25px;
             overflow: hidden; /* Empêcher l'affichage de la barre de défilement */
         }
 
@@ -113,7 +113,7 @@
 
         .arrow {
             position: absolute;
-            top: 42%;
+            top: 47%;
             transform: translateY(-50%);
             width: 30px;
             height: 30px;
