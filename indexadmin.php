@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACCUEIL</title>
+    <title>Administrateur</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,9 +31,8 @@
             
         }
         nav img{
-            width:13vw;
+            width:100px;
             text-align: center;
-            margin-top:18px;
         }
         .log{
             margin-top: 13px;
@@ -62,43 +61,22 @@
         #txt{
             color:white;
             font-family:Impact,fantasy;
-            font-size:20px;
+            font-weight: bold;
             display:flex;
             justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 25vh;
         }
-    </style>
+        </style>
 </head>
 <body>
- 
-    <nav> <!-- Balise de navigation -->
-        <div id="contenu"> <!-- Conteneur de la barre de navigation -->
-            <div> <!-- Première partie de la barre de navigation : logo -->
-                <img class="logo" src="Asset/quizzeo.png"> <!-- Logo -->
+    <nav> 
+        <div id="contenu"> 
+            <div> 
+                <img class="logo" src="Asset/quizzeo.png"> 
             </div>
-            <div class='log'> <!-- Deuxième partie de la barre de navigation : liens d'inscription et de connexion -->
-                <a href="./inscription.php" id="inscription">Inscription</a> <!-- Lien vers la page d'inscription -->
-                <a href="./login.php" id="connexion">Connexion</a> <!-- Lien vers la page de connexion -->
+            <div class='log'> 
+                <a href="./index.php" id="inscription">Deconnexion</a> 
             </div>
         </div>
     </nav>
- 
-    <div id="txt">
-                <h2>Tu es à l'accueil, tu peux te connecter ou t'inscrire !</h2>
-                <br>
-                <br>
-                <h3>
-                    Quizzeo est une plateforme de quizz en ligne. Le site vous permet de s’inscrire et de choisir si vous êtes utilisateur ou quizzeur, puis de vous connecter.
-                    <br>
-                    <br>
-                    Une fois votre compte créé vous pourrez jouer à des quizzs ou bien créer vos propres quizz en fonction de votre grade.
-                    <br>
-                    <br>
-                </h3>   
-    </div>
- 
- 
 </body>
 </html>
