@@ -21,8 +21,35 @@
             color: white;
             padding: 15px;
         }
+        h1{
+            color:white;
+            font-size:40px;
+            margin-left:70px;
+            margin-top:70px;
+        }
+        .container{
+            padding:2%;
+            margin-top:-40px;
+        }
+        form{
+            margin:2%;
+            transition: transform 0.3s ease;
+        }
+        form img {
+            box-shadow: 5px 5px 10px;
+            width: 250px;
+            height: 100px;
+            padding:1%;
+        }
         
- 
+    form:hover {
+         transform: scale(1.02);
+        }
+    form p{
+     font-size: 10px;
+     color: white;
+     text-align: center;
+    }
         nav a {
             color: white;
             text-decoration: none;
@@ -38,7 +65,10 @@
         .log{
             margin-top: 13px;
         }
- 
+        .container{
+            display: flex;
+            flex-wrap: nowrap;
+        }
         #inscription, #connexion {
             display: inline-block;
             padding: 10px 20px;
@@ -83,7 +113,8 @@
             </div>
         </div>
     </nav>
-    
+    <h1>Liste Quizz</h1>
+    <div class='container'>
     <?php
     session_start(); 
 
@@ -95,14 +126,14 @@
         ?>
         <form action="" method="post"> 
             <p><?php echo $line[0]; ?></p> 
-            <img src= "<?php echo $line[1]; ?>"> 
+            <img src="<?php echo $line[1];?>"/> 
         </form>
         <?php
     }
 
 
-fclose($file); 
-?>
-    
+ fclose($file); 
+ ?>
+    </div>
 </body>
 </html>
