@@ -20,6 +20,11 @@
             color: white;
             padding: 15px;
         }
+        h1{
+            text-align:center;
+            color:white;
+            margin-top:60px;
+        }
         nav a {
             color: white;
             text-decoration: none;
@@ -76,5 +81,36 @@
             </div>
         </div>
     </nav>
+    <h1><?php
+        session_start();
+
+        // Vérifiez si l'utilisateur est connecté
+        if (isset($_SESSION['id_user'])) {
+            // Chemin vers le fichier des utilisateurs
+            $user_file_name = 'user.csv';
+
+            // Ouvrir le fichier des utilisateurs en lecture
+            $user_file = fopen($user_file_name, 'r');
+
+            // Vérifier si le fichier a été ouvert avec succès
+            if ($user_file) {
+                // Lire la première ligne pour obtenir les en-têtes
+                $headers = fgetcsv($user_file);
+
+                // Parcourir le fichier pour rechercher l'entrée de l'utilisateur
+                while (($line = fgetcsv($user_file)) !== false) {
+                    // Si l'identifiant de l'utilisateur correspond à celui de la session actuelle
+                    if ($line[3] === $_SESSION['id_user']) {
+                        // Afficher un message de bienvenue avec le nom de l'utilisateur
+                        echo "Bienvenue " . $line[2];
+                        break; // Sortir de la boucle une fois que l'entrée de l'utilisateur est trouvée
+                    }
+                }
+
+                // Fermer le fichier des utilisateurs
+                fclose($user_file);
+            }
+        }
+        ?></h1>
 </body>
 </html>

@@ -10,8 +10,8 @@ if (isset($_POST['id']) && isset($_POST['mdp'])) {
 
     if ($file) {
         while (($line = fgetcsv($file)) !== false) {
-            if ($line[2] === $_POST['id']) {
-                if ($_POST['mdp'] === $line[3]) {
+            if ($line[3] === $_POST['id']) {
+                if ($_POST['mdp'] === $line[4]) {
                     // Ouverture du fichier pour enregistrer les connexions en mode écriture
                     $log_file = fopen($log_file_name, 'a');
 
