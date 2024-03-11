@@ -39,7 +39,7 @@
         nav img{
             width:13vw;
             text-align: center;
-            margin-top:11px;
+            margin-top:18px;
         }
         .log{
             margin-top: 13px;

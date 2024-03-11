@@ -31,8 +31,9 @@
             
         }
         nav img{
-            width:100px;
+            width:13vw;
             text-align: center;
+            margin-top:18px;
         }
         .log{
             margin-top: 13px;

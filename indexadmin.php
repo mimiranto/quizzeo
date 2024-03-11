@@ -17,12 +17,6 @@
             background-attachment: fixed;
          
         }
- 
-        nav {
-            background-color: rgb(255,255,255);
-            color: white;
-            padding: 15px;
-        }
         h1{
             color:white;
             font-size:40px;
@@ -53,6 +47,13 @@
          color: white;
          margin-right: 55px;
         }
+        nav {
+            background-color: rgb(255,255,255);
+            color: white;
+            padding: 15px;
+        }
+        
+ 
         nav a {
             color: white;
             text-decoration: none;
@@ -63,7 +64,7 @@
         nav img{
             width:13vw;
             text-align: center;
-            margin-top:11px;
+            margin-top:18px;
         }
         .log{
             margin-top: 13px;

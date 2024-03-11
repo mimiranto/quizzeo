@@ -15,14 +15,11 @@
             background-attachment: fixed;
          
         }
- 
         nav {
             background-color: rgb(255,255,255);
             color: white;
             padding: 15px;
         }
-        
- 
         nav a {
             color: white;
             text-decoration: none;
@@ -31,8 +28,9 @@
             
         }
         nav img{
-            width:100px;
+            width:13vw;
             text-align: center;
+            margin-top:18px;
         }
         .log{
             margin-top: 13px;
