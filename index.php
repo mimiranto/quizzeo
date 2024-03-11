@@ -68,6 +68,7 @@
             flex-direction: column;
             align-items: center;
             margin-top: 25vh;
+            letter-spacing: 1px;
         }
     </style>
 </head>

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrateur</title>
     <style>
+        /* Votre CSS existant ici */
+        /* Assurez-vous de garder vos styles pour .container, form, img, etc. */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -37,19 +39,20 @@
         }
         form img {
             box-shadow: 5px 5px 10px;
-            width: 250px;
-            height: 100px;
+            width: 430px;
+            height: 185px;
             padding:1%;
         }
         
-    form:hover {
+        form:hover {
          transform: scale(1.02);
         }
-    form p{
-     font-size: 10px;
-     color: white;
-     text-align: center;
-    }
+        form p{
+         text-align:center;
+         font-size: 15px;
+         color: white;
+         margin-right: 55px;
+        }
         nav a {
             color: white;
             text-decoration: none;
@@ -64,10 +67,6 @@
         }
         .log{
             margin-top: 13px;
-        }
-        .container{
-            display: flex;
-            flex-wrap: nowrap;
         }
         #inscription, #connexion {
             display: inline-block;
@@ -99,6 +98,42 @@
             align-items: center;
             margin-top: 25vh;
         }
+        .container {
+            position: relative;
+            white-space: nowrap;
+            margin-bottom: 20px;
+            overflow: hidden; /* Empêcher l'affichage de la barre de défilement */
+        }
+
+        .slide {
+            display: inline-block;
+            margin: 0 10px;
+            width: 500px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 42%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        
+        }
+
+        .arrow.left {
+            left: 0;
+        }
+
+        .arrow.right {
+            right: 0;
+        }
         </style>
 </head>
 <body>
@@ -119,21 +154,53 @@
     session_start(); 
 
     $file=fopen("quizz.csv","r"); 
+    $lines = [];
 
-    
     while (($line = fgetcsv($file)) !== false) { 
-    
+        $lines[] = $line;
         ?>
-        <form action="" method="post"> 
+        <form class="slide" action="" method="post"> 
             <p><?php echo $line[0]; ?></p> 
             <img src="<?php echo $line[1];?>"/> 
         </form>
         <?php
     }
 
+    
 
- fclose($file); 
- ?>
+
+    fclose($file); 
+    ?>
     </div>
+
+    <!-- Flèches de navigation -->
+    <div class="arrow left" onclick="scrollLeft()">&#10094;</div>
+    <div class="arrow right" onclick="scrollRight()">&#10095;</div>
+
+    <script>
+        function scrollLeft() {
+            const container = document.querySelector('.container');
+            const scrollPos = container.scrollLeft;
+            if (scrollPos > 0) {
+                container.scrollBy({ left: -200, behavior: 'smooth' });
+            } else {
+                const slides = document.querySelectorAll('.slide');
+                const lastSlide = slides[slides.length - 1];
+                container.scrollTo({ left: lastSlide.offsetLeft, behavior: 'smooth' });
+            }
+        }
+
+        function scrollRight() {
+            const container = document.querySelector('.container');
+            const scrollPos = container.scrollLeft;
+            const maxScroll = container.scrollWidth - container.clientWidth;
+
+            if (scrollPos < maxScroll) {
+                container.scrollBy({ left: 525, behavior: 'smooth' });
+            } else {
+                container.scrollTo({ left: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
 </body>
 </html>
