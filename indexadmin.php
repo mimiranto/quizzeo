@@ -144,7 +144,7 @@
             </div>
             <div class='log'> 
              <a href="./user.php" id="inscription">Voir tout les Utilisateurs</a>
-             <a href="./index.php" id="inscription">Deconnexion</a> 
+             <a href="./traitement_deco.php" id="inscription">Deconnexion</a> 
             </div>
         </div>
     </nav>

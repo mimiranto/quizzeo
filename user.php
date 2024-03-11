@@ -87,14 +87,14 @@
         background-color:#cacadaf5;
         box-shadow: 5px 5px 10px;
         transition: transform 0.3s ease;
-    }
-    form:hover {
+        }
+        form:hover {
          transform: scale(1.05);
         }
-    form p{
-     font-size: 10px;
-     color: white;
-    }
+        form p{
+         font-size: 13px;
+         color: black;
+        }
         </style>
 </head>
 <body>

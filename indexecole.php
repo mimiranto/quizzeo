@@ -74,7 +74,7 @@
                 <img class="logo" src="asset/quizzeo.png"> 
             </div>
             <div class='log'> 
-                <a href="./index.php" id="inscription">Deconnexion</a> 
+                <a href="./traitement_deco.php" id="inscription">Deconnexion</a> 
             </div>
         </div>
     </nav>
