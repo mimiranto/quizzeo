@@ -33,6 +33,7 @@
         nav img{
             width:100px;
             text-align: center;
+            margin-top: 18px;
         }
         .log{
             margin-top: 13px;
@@ -64,6 +65,7 @@
             font-weight: bold;
             display:flex;
             justify-content: center;
+            text-align: center;
         }
     </style>
 </head>
@@ -81,8 +83,18 @@
         </div>
     </nav>
  
-   <h1 id="txt">Créez ou participez aux meilleurs quizz</h1>
- 
+    <div id="text">
+                <h2>Tu es à l'accueil, tu peux te connecter ou t'inscrire !</h2>
+                <h3>
+                    Quizzeo est une plateforme de quizz en ligne. Le site vous permet de s’inscrire et de choisir si vous êtes utilisateur ou quizzeur, puis de vous connecter.
+                    <br>
+                    <br>
+                    Une fois votre compte créé vous pourrez jouer à des quizzs ou bien créer vos propres quizz en fonction de votre grade.
+                    <br>
+                    <br>
+                </h3>   
+    </div>
+
  
 </body>
 </html>
