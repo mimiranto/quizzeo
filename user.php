@@ -82,7 +82,7 @@
         padding: 1%;
         border: solid 2px black;
         width: 85%;
-        margin-left: 100px;
+        margin-left:50px;
         border-radius: 15px;
         background-color:#cacadaf5;
         box-shadow: 5px 5px 10px;
@@ -112,6 +112,7 @@
     <h1>Liste Utilisateurs</h1>
     <?php
     session_start(); 
+    
 
     $file=fopen("user.csv","r"); 
 
@@ -119,13 +120,13 @@
     while (($line = fgetcsv($file)) !== false) { 
     
         ?>
-        <form action="" method="post"> 
+        <form action="traitement_activation.php?route=<?php echo $line[3]; ?>" method="post"> 
             <p><?php echo $line[0]; ?></p> 
             <p><?php echo $line[3]; ?></p> 
             <p><?php echo $line[4]; ?></p> 
-            <div class='supp'>
-                <input type="submit" name="action" id='sup' value="Supprimer"> 
-            </div> 
+        <div class='supp'>
+            <input type="submit" name="action" value="<?php echo  $line[6]; ?>"> 
+        </div> 
         </form>
         <?php
     }

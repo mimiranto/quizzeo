@@ -114,7 +114,7 @@
 
         .arrow {
             position: absolute;
-            top: 47%;
+            top: 60%;
             transform: translateY(-50%);
             width: 30px;
             height: 30px;
