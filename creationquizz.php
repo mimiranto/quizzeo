@@ -17,12 +17,13 @@ if (isset($_POST['nom']) && isset($_POST['action'])&& isset($_GET['id'])) { // V
         $file = fopen('quizz.csv', 'a+'); // Ouvre à nouveau le fichier des favoris en mode lecture et écriture
 
        
-           while ($_SESSION['ajouts']<6){
+           if($_SESSION['ajouts']<6){
                 fputcsv($file,[$_POST['nom'],$_GET['id'],$_POST['qst1'],$_POST['reponse1'],$_POST['reponse2'],$_POST['reponse3'],$_POST['reponse4'],$_POST['point']]);
                 $_SESSION['ajouts']++; // Incrémenter le compteur
                 header('location: ./pagecreation.php');
+
             }
-            #else{
+            else{
                 $url=$_POST['nom'];
                 $url_quiz = "http://localhost/quizzeo/quizzstart.php?bb=$url";
                 $file_name1 = 'nomquizz.csv';
@@ -44,10 +45,9 @@ if (isset($_POST['nom']) && isset($_POST['action'])&& isset($_GET['id'])) { // V
                         }
             
                     }
-                
                    
                
-            #}
+            }
             fclose($file_z); 
             
             } // Logique pour vérifier et ajouter l'attraction aux favoris
