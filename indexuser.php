@@ -12,7 +12,8 @@
             background-color: #403644;        
             background-position: center;
             background-size: cover;
-            background-attachment: fixed;
+            background-attachment: fixed;    
+            
          
         }
         nav {
