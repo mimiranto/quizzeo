@@ -1,5 +1,11 @@
 <?php
 session_start();
+if (!isset( $_SESSION['nom'])){
+    $_SESSION['nom']="";
+}
+if (!isset( $_SESSION['ajouts'])){
+    $_SESSION['ajouts']=1;
+}
 $indice=$_SESSION['ajouts'];
 if ($indice ==6){
     $indice=1 ;
