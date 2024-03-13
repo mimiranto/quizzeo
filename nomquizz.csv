@@ -1,0 +1,10 @@
+id_quizz,image,url
+Quizz Beyblade,./asset/beyblade.png,
+Quizz Capitale,./asset/monde.png,
+Quizz One Piece,./asset/OnePiece.png,
+Quizz FairyTail, ./asset/Fairytail.png,
+Quizz Malcolm, ./Asset/malcolm.jpg ,
+Toi,,http://localhost/quizzeo/quizzstart.php?bb=Toi
+TOI,,http://localhost/quizzeo/quizzstart.php?bb=TOI
+TOI,,http://localhost/quizzeo/quizzstart.php?bb=TOI
+TOI,,http://localhost/quizzeo/quizzstart.php?bb=TOI

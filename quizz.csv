@@ -1,5 +1,2 @@
-Quizz Beyblade,./asset/beyblade.png
-Quizz Capitale,./asset/monde.png
-Quizz One Piece,./asset/OnePiece.png
-Quizz FairyTail, ./asset/Fairytail.png
-Quizz Malcolm, ./Asset/malcolm.jpg 
+id_nom,id,qst1,reponse1,reponse2,reponse3,reponse4,point
+

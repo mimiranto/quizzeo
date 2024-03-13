@@ -154,7 +154,7 @@
     <?php
     session_start(); 
 
-    $file=fopen("quizz.csv","r"); 
+    $file=fopen("nomquizz.csv","r"); 
     $lines = [];
 
     while (($line = fgetcsv($file)) !== false) { 

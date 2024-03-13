@@ -79,5 +79,6 @@
             </div>
         </div>
     </nav>
+    <a href="./pagecreation.php" id="inscription">Creation</a>
 </body>
 </html>
