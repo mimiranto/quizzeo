@@ -31,6 +31,10 @@
             margin:2%;
             transition: transform 0.3s ease;
         }
+        form a {
+            text-decoration:none;
+            color:black;
+        }
         form img {
             box-shadow: 5px 5px 10px;
             width: 430px;
@@ -160,9 +164,9 @@
     while (($line = fgetcsv($file)) !== false) { 
         $lines[] = $line;
         ?>
-        <form class="slide" action="" method="post"> 
+        <form class="slide"> 
             <p><?php echo $line[0]; ?></p> 
-            <img src="<?php echo $line[1];?>"/> 
+            <a href="<?php $line[2]?>"><img src="<?php echo $line[1];?>"/></a>
         </form>
         <?php
     }

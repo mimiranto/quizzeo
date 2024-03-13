@@ -11,10 +11,10 @@
         // Vérification si le fichier est vide
         if (filesize($file_name) == 0) {
             // Écriture de l'en-tête du fichier CSV
-            fputcsv($file, ['choix','prenom', 'nom', 'id', 'mdp','mail','0']);
+            fputcsv($file, ['choix','prenom', 'nom', 'id', 'mdp','mail','Activé']);
         }
     
-        fputcsv($file, [$_POST['choix'], $_POST['nom'], $_POST['prenom'], $_POST['id'], $_POST['mdp'],$_POST['mail'],'0']);
+        fputcsv($file, [$_POST['choix'], $_POST['nom'], $_POST['prenom'], $_POST['id'], $_POST['mdp'],$_POST['mail'],'Activé']);
 
 
         fclose($file);

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+2024-03-12 14:02,K27,Déconnecté
+"2024-03-12 14:03",K27,Connecté
+2024-03-13 16:22,K27,Déconnecté
+=======
 "2024-03-12 09:54",admin,Connecté
 2024-03-12 09:56,test1,Déconnecté
 2024-03-12 09:56,test3,Déconnecté
@@ -22,5 +27,9 @@
 "2024-03-12 10:55",admin,Connecté
 "2024-03-12 11:40",admin,Connecté
 "2024-03-12 15:29",admin,Connecté
+<<<<<<< HEAD
 2024-03-13 16:28,test2,Déconnecté
 "2024-03-13 16:39",admin,Connecté
+=======
+>>>>>>> 918d272d748ea25f861b1d406a1d40e7ca86d8c1
+>>>>>>> f71f5c63fa265fa009137c708e6961387cbf7f75

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
     <style>
@@ -629,6 +630,8 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
                     <div class="form-group"> 
                         <label for="mdp"><i class="zmdi zmdi-lock-outline"></i></label> 
                         <input type="password" name="mdp" id="mdp" placeholder="Mot de Passe"/> 
+                        <br>
+                        <div class="g-recaptcha" data-sitekey="6Ld6rpcpAAAAAFEykn2TpL2WKyN8l_1mFIQ4NP9v"></div>
                     </div>
                     <label for="choix"></label>
                     <select id="choix" name="choix">
