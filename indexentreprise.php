@@ -77,7 +77,9 @@
             <div class='log'> 
                 <a href="./traitement_deco.php" id="inscription">Deconnexion</a> 
             </div>
+            
         </div>
     </nav>
+    <a href="./pagecreation.php" id="inscription">Creation</a>
 </body>
 </html>

@@ -1,4 +1,18 @@
-Quizz Beyblade,./asset/beyblade.png,https://beyblade-shop.com/
-Quizz Capitale,./asset/monde.png
-Quizz One Piece,./asset/OnePiece.png
-Quizz FairyTail,./asset/Fairytail.png
+id_nom,id,qst1,reponse1,reponse2,reponse3,reponse4,point
+toi,1,sdcsdc,csdcds,sdcsdc,,sdcsdcsd,1
+toi,2,sdcsdc,csdcds,sdcsdc,,sdcsdcsd,1
+toi,3,sdcsdc,csdcds,sdcsdc,,sdcsdcsd,1
+toi,4,sdcsdc,csdcds,sdcsdc,,sdcsdcsd,1
+toi,5,sdcsdc,csdcds,sdcsdc,,sdcsdcsd,1
+1111,1,11111,111,111,,1111,1111
+1111,2,1111,111,111,,111,111
+1111,3,111,111,111,,111,1111
+1111,4,111,111,111,,1111,1111
+1111,5,1111,111,111,,1111,1111
+toi,1,sdvsdsdfv,sdcdscsd,dsdsdsd,,sdfdsfd,12toi,
+toi,0,SDFGH,DFGH,DFG,DFGH,DEFG,1
+toi,1,CVB,CDVB,CVBN,CVB,CVBN,1
+toi,2,"VB N",FVGBH,VFGBH,CFVB,FGH,1
+toi,3,VBN,VFGBH,CFVB,CXDFG,FGH,1
+toi,4,XCV,DFG,CVB,CDVB,CFVGH,1
+toi,5,CVB,CFGBN,VFBN,CVB,CVBN,1
