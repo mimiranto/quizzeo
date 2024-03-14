@@ -17,10 +17,23 @@ if ($indice ==6){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    <title>Création Quizz</title>
+    <link rel="stylesheet" type="text/css" href='pagecreation.css'>
 </head>
 <body>
+    <nav> 
+        <div id="contenu"> 
+            <div> 
+                <img class="logo" src="asset/quizzeo.png"> 
+            </div>
+            <div class='log'> 
+                <a href="./traitement_deco.php" id="inscription">Deconnexion</a> 
+            </div>
+        </div>
+    </nav>
      <form method="post" action="creationquizz.php?id=<?php echo  $indice?>">
+     <h1>Création de Quizz</h1>
+     <h1>Question <?php echo $indice?>/5</h1>
      <label for="choix"> Nom du Quizz </label>
      <input type="text" name="nom" id='ajt' value="<?php echo $_SESSION['nom'] ?>" >
      <label for="choix"> Question  </label>
@@ -36,6 +49,6 @@ if ($indice ==6){
      <label for="choix"> Point </label>
      <input type="number" name="point" id='ajt' required>
      <input type="submit" name="action" id='ajt' value="Ajouter">
-     <h1><?php echo $indice?>/5</h1>
+     
 </body>
 </html>

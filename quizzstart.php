@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href='quizzstart.css'>
+</head>
+<body>
+    
+</body>
+</html>
+<nav> 
+        <div id="contenu"> 
+            <div> 
+                <img class="logo" src="asset/quizzeo.png"> 
+            </div>
+            <div class='log'> 
+                <a href="./traitement_deco.php" id="inscription">Deconnexion</a> 
+            </div>
+        </div>
+    </nav>
 <?php
     session_start(); // Démarre une session PHP
 
@@ -56,3 +78,6 @@
 fclose($file); // Ferme le fichier CSV des favoris
 ?>
   <h1><?php echo $_SESSION['ligne']."".$_SESSION['Point']?>/5</h1>
+
+  </body>
+</html>
