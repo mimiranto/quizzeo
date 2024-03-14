@@ -30,7 +30,7 @@ if ($indice ==6){
      <label for="choix"> Mauvaise reponse  </label>
      <input type="text" name="reponse2" id='ajt' required >
      <label for="choix"> Mauvaise reponse   </label>
-     <input type="text" n ame="reponse3" id='ajt'  required>
+     <input type="text" name="reponse3" id='ajt'  required>
      <label for="choix"> Mauvaise reponse   </label>
      <input type="text" name="reponse4" id='ajt' required>
      <label for="choix"> Point </label>
