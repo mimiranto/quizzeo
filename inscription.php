@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+session_start();
+$_SESSION['captcha'] = mt_rand(1000, 9999);
+$img = imagecreate(120, 40);
+$font = './fonts/destroyfont.ttf';
+$bg = imagecolorallocate($img, 255, 255, 255);
+$textcolor = imagecolorallocate($img, 0, 0, 0);
+
+imagettftext($img, 20, 0, 10, 30, $textcolor, $font, $_SESSION['captcha']); 
+
+header('Content-Type: image/jpeg'); 
+imagejpeg($img); 
+imagedestroy($img); 
+?>
+
 <head>
     <meta charset="UTF-8">
     <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -632,6 +647,7 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
                         <input type="password" name="mdp" id="mdp" placeholder="Mot de Passe"/> 
                         <br>
                         <div class="g-recaptcha" data-sitekey="6Ld6rpcpAAAAAFEykn2TpL2WKyN8l_1mFIQ4NP9v"></div>
+                        
                     </div>
                     <label for="choix"></label>
                     <select id="choix" name="choix">
