@@ -9,7 +9,7 @@ if (isset($_POST['nom']) && isset($_POST['action'])&& isset($_GET['id'])) { // V
     $file = fopen($file_name, 'a'); // Ouvre le fichier en mode "ajout" 
 
     if (filesize($file_name) == 0) { // Vérifie si le fichier est vide
-        fputcsv($file, [ 'id_nom', 'id','qst1', 'reponse1', 'reponse2','reponse3','reponse4','point']); // Écrit une ligne d'en-tête CSV si le fichier est vide
+        fputcsv($file, [ 'id_user'.'id_nom', 'id','qst1', 'reponse1', 'reponse2','reponse3','reponse4','point']); // Écrit une ligne d'en-tête CSV si le fichier est vide
     }
     fclose($file); // Ferme le fichier
 
@@ -29,26 +29,18 @@ if (isset($_POST['nom']) && isset($_POST['action'])&& isset($_GET['id'])) { // V
                 $file_name1 = 'nomquizz.csv';
                 $file_y= fopen( $file_name1 , 'a');
                 if (filesize( $file_name1) == 0) { // Vérifie si le fichier est vide
-                    fputcsv($file_y, [ 'id_quizz','image','url']); // Écrit une ligne d'en-tête CSV si le fichier est vide
+                    fputcsv($file_y, [ $_SESSION['id_user'],'id_quizz','image','url']); // Écrit une ligne d'en-tête CSV si le fichier est vide
                 }
                 fputcsv($file_y,[$_POST['nom'],$_POST['image'],$url_quiz]);
                 fclose($file_y); 
-                $file_z=fopen("user.csv","r"); 
-                while (($line = fgetcsv($file_z)) !== false) { 
-                    if ($_SESSION['id_user'] == $line[1]){
-                        if($line[0] == 'Ecole'){
-                            header('location: ./indexecole.php');
-
-                        }
-                        else{
-                            header('location: ./indexentreprise.php');
-                        }
-            
-                    }
-                   
-               
-            }
-            fclose($file_z); 
+                if ($_SESSION['sat'] == 'Ecole'){
+                    $_SESSION['ajouts']=0;
+                     header('location: ./indexecole.php');
+                }
+                else{
+                    $_SESSION['ajouts']=0;
+                    header('location: ./indexentreprise.php');
+                }
             
             } // Logique pour vérifier et ajouter l'attraction aux favoris
             fclose($file); // Ferme le fichier des favoris

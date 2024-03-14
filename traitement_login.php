@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['id_user'] = $_POST['id'];
+$_SESSION['sat'] = "";
 
 if (isset($_POST['id']) && isset($_POST['mdp'])) {
     $file_name = 'user.csv';
@@ -32,17 +33,21 @@ if (isset($_POST['id']) && isset($_POST['mdp'])) {
                     // Redirection de l'utilisateur vers la page appropriée
                      if ($line[0] === 'admin') {
                          fclose($file);
+                         $_SESSION['sat']='admin';
                          header('Location: ./indexadmin.php');
                          exit();
                         } else if ($line[0] === 'Entreprise') {
                          fclose($file);
+                         $_SESSION['sat']='Entreprise';
                          header('Location: ./indexentreprise.php');
                          exit();
                         } else if ($line[0] === 'Ecole') {
+                        $_SESSION['sat']='Ecole';
                          fclose($file);
                          header('Location: ./indexecole.php');
                          exit();
                         } else {
+                        $_SESSION['sat']='user';
                          fclose($file);
                          header('Location: ./indexuser.php');
                          exit();   

@@ -16,8 +16,9 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
                  // Marquer que le choix est trouvé
                 break; // Sort de la boucle si un match est trouvé
             }
-
+           
         }
+      
         fclose($file); // Ferme le fichier CSV des favoris
      
         if ($_SESSION['ligne'] < 5) {
@@ -26,19 +27,54 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
                 header('location: ./quizzstart.php');
             
         } else {
-            $_SESSION['ligne'] = 1;
             header('location: ./quizzstart.php');
         }
 
         
        
     }
-    // if ($_POST['action'] == 'Accueil') {
-
+    elseif ($_POST['action'] == 'Accueil') {
+         if ($_SESSION['ligne'] == 5){
+            $etat='Terminer';
+        }
+        else{
+            $etat= 'En cours';
+        }
+        $file_s=fopen("progretion.csv","r"); 
+        while (($data = fgetcsv($file_s)) !== false) {
+            $tab1[] = $data;
+        }
+        fclose($file_s);
+        $verif=false;
+        // Parcourir le tableau pour trouver et modifier la ligne appropriée
+        foreach ($tab1 as $key => $value) {
+            if ($value[0] == $_SESSION['id_user'] && $value[1] == $_SESSION['nom'] ) { 
+                $tab1[$key][2] = $_SESSION['ligne'];
+                $tab1[$key][3] =  $_SESSION['Point'];
+                $verif=true;
+                break;
+                }
+            }
+            
         
-    //     $file_ = fopen("quizz.csv", "a");
-    //     fputcsv($file_y,["stevens",$_POST['nom'],);
-    //     fclose($file);
+        if ($verif) {
+          $file_u = fopen('progretion.csv', 'w');
+         // Écrire les modifications dans le fichier CSV
+            foreach ($tab1 as $ligne) {
+            fputcsv($file_u, $ligne);
+         }
+            fclose($file_u);
+            header('location: ./indexecole.php');
+            // header('location: ./indexentreprise.php');
+         }
+         else {
+            $file_p= fopen("progretion.csv", "a");
+             fputcsv($file_p,array($_SESSION['id_user'],$_SESSION['nom'],$_SESSION['ligne'], $_SESSION['Point'],$etat));
+            fclose($file_p);
+            header('location: ./indexecole.php');
+            // header('location: ./indexentreprise.php');
+       }
+       
+    }
 
-    // }    
-}
+    }    
