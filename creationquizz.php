@@ -29,9 +29,9 @@ if (isset($_POST['nom']) && isset($_POST['action'])&& isset($_GET['id'])) { // V
                 $file_name1 = 'nomquizz.csv';
                 $file_y= fopen( $file_name1 , 'a');
                 if (filesize( $file_name1) == 0) { // Vérifie si le fichier est vide
-                    fputcsv($file_y, [ $_SESSION['id_user'],'id_quizz','image','url']); // Écrit une ligne d'en-tête CSV si le fichier est vide
+                    fputcsv($file_y, [ 'id_user','id_quizz','image','url','status']); // Écrit une ligne d'en-tête CSV si le fichier est vide
                 }
-                fputcsv($file_y,[$_POST['nom'],$_POST['image'],$url_quiz]);
+                fputcsv($file_y,[$_SESSION['id_user'],$_POST['nom'],$_POST['image'],$url_quiz,$_SESSION['sat']]);
                 fclose($file_y); 
                 if ($_SESSION['sat'] == 'Ecole'){
                     $_SESSION['ajouts']=0;
