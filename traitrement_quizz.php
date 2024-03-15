@@ -7,19 +7,34 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
 
     if ($_POST['action'] == 'Continuer') { // Vérifie si l'action est de continuer
 
-        // Ouvre le fichier CSV des favoris en mode lecture
-        $file = fopen("quizz.csv", "r");
+       // Ouvre le fichier CSV des favoris en mode lecture
+       $file = fopen("quizz.csv", "r");
 
-        while (($line = fgetcsv($file)) !== false) {
-            if ($_POST['choix'] == $line[3]) { 
-                $_SESSION['Point']= $_SESSION['Point']+$line[7];
-                 // Marquer que le choix est trouvé
-                break; // Sort de la boucle si un match est trouvé
-            }
-
-        }
-
-        fclose($file); // Ferme le fichier CSV des favoris
+       // Initialise un tableau vide
+               $tab2 = [];
+   
+       // Parcourir le fichier CSV ligne par ligne
+           while (($line = fgetcsv($file, 0, ",")) !== false) {
+           // Ajoute la ligne au tableau
+               $tab2[] = $line;
+           }
+   
+       // Ferme le fichier CSV des favoris
+               fclose($file);
+   
+   // Parcourir le tableau pour trouver et modifier la ligne appropriée
+           foreach ($tab2 as $value) {
+               // Vérifie si la valeur dans la deuxième colonne correspond à $_SESSION['ligne']
+               if ($value[1] == $_SESSION['ligne']) { 
+                   // Vérifie si la valeur dans la quatrième colonne correspond à $_POST['choix']
+                   if ($value[3] == $_POST['choix']) {
+                       // Ajoute la valeur de la huitième colonne à $_SESSION['Point']
+                       $_SESSION['Point'] += $value[7];
+                       // Sort de la boucle si une correspondance est trouvée
+                       break;
+                   }
+               }
+           }
 
         if ($_SESSION['ligne'] < 5) {
            // Si le choix n'est pas trouvé

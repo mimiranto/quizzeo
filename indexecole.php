@@ -159,17 +159,35 @@
         while(($line = fgetcsv($file)) !== false) { // Lecture de chaque ligne du fichier
            if ($line[4] === 'Ecole'){
         ?>
-             <form class="slide"> 
-            <p><?php echo $line[1]; ?></p> 
-            <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
-            <input type="submit" name="action" value="<?php echo  $line[5]; ?>"> 
+            <form class="slide" action="activation_quizz.php" method="post"> 
+                <p><?php echo $line[1]; ?></p> 
+                <input type="hidden" name="route" value="<?php echo  $line[1]; ?>"> 
+                <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
+             <input type="submit" name="action" value="<?php echo  $line[5]; ?>"> 
             </form>
+            <?php 
+            if ($line[5] === 'Terminer') {
+                $file_d=fopen("progretion.csv","r"); 
+                $lines = [];
+            while(($data=fgetcsv($file_d))!==false){ // Parcours du fichier CSV des favoris
+                while(($line1 = fgetcsv($file_d)) !== false) { 
+                    if($line1[1]==$line[1]){// Lecture de chaque ligne du fichier
+                        if ($line1[4] === 'Terminer'){
+                            echo ''.$line1[0].''.$line1[3];
+
+                        }}}
+            }
+            fclose($file_d); 
+            ?>
         <?php
            }}
     }
+}
     fclose($file); 
     ?>
     </div>
+
+    
 
     <!-- Flèches de navigation -->
     <div class="arrow left" onclick="scrollLeft()">&#10094;</div>
