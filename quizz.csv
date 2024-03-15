@@ -16,3 +16,56 @@ toi,2,"VB N",FVGBH,VFGBH,CFVB,FGH,1
 toi,3,VBN,VFGBH,CFVB,CXDFG,FGH,1
 toi,4,XCV,DFG,CVB,CDVB,CFVGH,1
 toi,5,CVB,CFGBN,VFBN,CVB,CVBN,1
+"Quizz 1",1,"Quelle est la capital de la France",Paris,"New York",Barcelone,"Los Angeles",1
+"Quizz 1",2,N,n,n,n,n,1
+"Quizz 1",3,n,n,n,n,n,1
+"Quizz 1",4,n,n,n,n,n,1
+"Quizz 1",5,n,n,n,n,n,1000
+"Quizz 2",0,"Quelle est la capital de la France",1,2,3,4,1
+"Quizz 2",1,quizz,1,2,3,4,1
+"Quizz 2",2,"quizz 4",1,2,3,2,1
+"Quizz 2",3,"Quelle est la capital de la France",1,2,3,4,1
+"Quizz 2",4,"Quelle est la capital de la France",1,2,3,4,1
+"Quizz 2",5,"Quelle est la capital de la France",1,2,3,4,1
+"Quizz 2",0,"Quelle est la capital de la France",1,2,3,4,1
+"Quizz 2",1,"Quelle est la capital de la France",1,2,3,4,1
+"Quizz 2",2,"Quelle est la capital de la France",1,2,3,4,5
+"Quizz 2",3,"Quelle est la capital de la France",1,2,3,4,5
+"Quizz 2",4,"Quelle est la capital de la France",1,2,34,5,4
+"Quizz 2",5,"Quelle est la capital de la France",1,23,4,78,5
+"Quizz 2",0,"Quelle est la capital de la France",1,2,3,4,5
+"Quizz 2",1,"Quelle est la capital de la France",1,2,3,4,5
+"Quizz 2",2,"Quelle est la capital de la France",1,2,3,4,5
+"Quizz 2",3,"Quelle est la capital de la France",1,2,3,4,5
+"Quizz 2",4,"Quelle est la capital de la France",1,2,3,4,5
+"Quizz 2",5,"Quelle est la capital de la France",1,2,3,4,5
+"Quizz 3",0,"Quelle est la capital de la France",1,1,1,1,1
+"Quizz 3",1,1,1,1,1,1,1
+"Quizz 3",2,1,1,1,1,1,1
+"Quizz 3",3,1,1,1,1,1,1
+"Quizz 3",4,1,1,1,1,1,1
+"Quizz 3",5,1,1,1,1,11,1
+"Quizz 3",0,1,1,1,1,1,1
+"Quizz 3",1,1,1,1,1,1,1
+"Quizz 3",2,1,1,1,1,1,1
+"Quizz 3",3,1,1,1,1,1,1
+"Quizz 3",4,1,1,1,1,1,1
+"Quizz 3",5,1,1,1,1,1,1
+"Quizz 3",0,"Quelle est la capital de la France",1,1,1,1,1
+"Quizz 3",1,"Quelle est la capital de la France",1,1,1,1,1
+"Quizz 3",2,"Quelle est la capital de la France",1,1,1,1,1
+"Quizz 3",3,"Quelle est la capital de la France",1,1,1,1,1
+"Quizz 3",4,"Quelle est la capital de la France",1,1,1,1,1
+"Quizz 3",5,1,1,1,1,11,1
+"Quizz 3",0,1,1,1,1,1,1
+"Quizz 3",1,1,2,1,1,1,1
+"Quizz 3",2,1,1,1,11,1,1
+"Quizz 3",3,1,1,1,1,1,1
+"Quizz 3",4,2,2,2,2,2,2
+"Quizz 3",5,2,22,2,2,2,2
+"Quizz 3",0,1,1,1,1,1,1
+"Quizz 3",1,1,1,1,1,1,1
+"Quizz 3",2,1,1,1,1,1,1
+"Quizz 3",3,1,1,1,1,1,1
+"Quizz 3",4,1,1,1,1,1,1
+"Quizz 3",5,1,1,1,1,1,1
