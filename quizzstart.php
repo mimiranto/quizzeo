@@ -167,7 +167,7 @@ nav img {
            <form action="traitrement_quizz.php" method="post">
                 
                 <h1>Question <?php echo $_SESSION['ligne']?></h1>
-                <label for="nom"><?php echo $line[2]?></label>
+                <label for="nom"><?php echo $line[2]?> ? </label>
                 <select name="choix" id="">
                     <?php
                     foreach($option as $options){
@@ -186,7 +186,7 @@ nav img {
 fclose($file); // Ferme le fichier CSV des favoris
 ?>
     
-  <h1>Score :<?php echo $_SESSION['Point']?>/5</h1>
+  <h1>Score <?php echo $_SESSION['Point']?>/5</h1>
 </div>
   </body>
 </html>

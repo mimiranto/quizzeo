@@ -53,18 +53,25 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
             fputcsv($file_u, $ligne);
          }
             fclose($file_u);
-            // header('location: ./indexentreprise.php');
+            //header('fin.php');
          }
+         else {
+            $file_p= fopen("progretion.csv", "a");
+             fputcsv($file_p,array($_SESSION['id_user'],$_SESSION['nom'],$_SESSION['ligne'], $_SESSION['Point'],$etat));
+            fclose($file_p);
+            // header('location: ./indexentreprise.php');
+       }
+
             if ($_SESSION['sat'] == 'Ecole'){
 
-                 header('location: ./indexecole.php');
-            }
-            elseif($_SESSION['sat'] == 'Entreprise'){
+                  header('location: ./fin.php');
+             }
+             elseif($_SESSION['sat'] == 'Entreprise'){
 
-                header('location: ./indexentreprise.php');
-            }
-            else {
-                header('location: ./indexuser.php');
+                 header('location: ./fin.php');
+             }
+             else {
+                 header('location: ./fin.php');
             }
         }
 
