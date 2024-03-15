@@ -69,6 +69,77 @@
             display:flex;
             justify-content: center;
         }
+        form{
+            margin:2%;
+            transition: transform 0.3s ease;
+        }
+        form a {
+            text-decoration:none;
+            color:black;
+        }
+        form img {
+            box-shadow: 5px 5px 10px;
+            width: 430px;
+            height: 185px;
+            padding:1%;
+        }
+        
+        form:hover {
+         transform: scale(1.02);
+        }
+        form p{
+         text-align:center;
+         font-size: 15px;
+         color: white;
+         margin-right: 55px;
+        }
+        h1{
+            color:white;
+            font-size:40px;
+            margin-top:70px;
+        }
+        .container {
+            position: relative;
+            white-space: nowrap;
+            margin-top:25px;
+            overflow: hidden; /* Empêcher l'affichage de la barre de défilement */
+        }
+
+        .slide {
+            display: inline-block;
+            margin: 0 50px;
+            width: 500px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 75%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        
+        }
+
+        .arrow.left {
+            left: 0;
+        }
+
+        .arrow.right {
+            right: 0;
+        }
+        .titre{
+            color:white;
+            font-size:40px;
+            display:flex;
+            margin-left:55px;
+        }
         </style>
 </head>
 <body>
@@ -113,5 +184,57 @@
             }
         }
         ?></h1>
+    <div class='container'>
+    <h1 class='titre'>Quizz</h1>
+    <?php
+
+    $file=fopen("nomquizz.csv","r"); 
+    $lines = [];
+
+    while(($data=fgetcsv($file))!==false){ 
+        while(($line = fgetcsv($file)) !== false) { 
+        $lines[] = $line;
+        ?>
+        <form class="slide"> 
+            <p><?php echo $line[1]; ?></p> 
+            <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
+        </form>
+        <?php
+      }
+    }
+
+    fclose($file); 
+    ?>
+    </div>
+
+    <!-- Flèches de navigation -->
+    <div class="arrow left" onclick="scrollLeft()">&#10094;</div>
+    <div class="arrow right" onclick="scrollRight()">&#10095;</div>
+
+    <script>
+        function scrollLeft() {
+            const container = document.querySelector('.container');
+            const scrollPos = container.scrollLeft;
+            if (scrollPos > 0) {
+                container.scrollBy({ left: -200, behavior: 'smooth' });
+            } else {
+                const slides = document.querySelectorAll('.slide');
+                const lastSlide = slides[slides.length - 1];
+                container.scrollTo({ left: lastSlide.offsetLeft, behavior: 'smooth' });
+            }
+        }
+
+        function scrollRight() {
+            const container = document.querySelector('.container');
+            const scrollPos = container.scrollLeft;
+            const maxScroll = container.scrollWidth - container.clientWidth;
+
+            if (scrollPos < maxScroll) {
+                container.scrollBy({ left: 525, behavior: 'smooth' });
+            } else {
+                container.scrollTo({ left: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
 </body>
 </html>

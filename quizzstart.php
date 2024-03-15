@@ -102,14 +102,14 @@ nav img {
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            background-color: #4CAF50;
+            background-color: #FFB6C1;
             color: white;
             cursor: pointer;
             margin-right: 10px;
         }
 
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #D8BFD8;
         }
         </style>
 </head>
@@ -128,6 +128,7 @@ nav img {
         </div>
     </nav>
     <div class='container'>
+        
 <?php
     session_start(); // Démarre une session PHP
 
@@ -162,9 +163,10 @@ nav img {
                 $option=array($line[3], $line[4], $line[5], $line[6]);
                 shuffle($option);
              // Lecture de chaque ligne du fichier
-           ?>  <!-- Vérifie si l'ID de l'utilisateur correspond à celui stocké en session -->
+           ?>  
            <form action="traitrement_quizz.php" method="post">
-                <h1><?php echo $_SESSION['nom'] ?></h1>
+                
+                <h1>Question <?php echo $_SESSION['ligne']?></h1>
                 <label for="nom"><?php echo $line[2]?></label>
                 <select name="choix" id="">
                     <?php
@@ -183,7 +185,7 @@ nav img {
 
 fclose($file); // Ferme le fichier CSV des favoris
 ?>
-    <h1>Question <?php echo $_SESSION['ligne']?></h1>
+    
   <h1>Score :<?php echo $_SESSION['Point']?>/5</h1>
 </div>
   </body>
