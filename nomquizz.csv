@@ -1,6 +1,6 @@
 id_user,id_quizz,image,url,role,statu
-test2,"Quizz ecole",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+ecole,Ecole
-test2,"Quizz 2 test",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+2+test,Ecole
-test1,"quizz Entreprise",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=quizz+Entreprise,Entreprise
-test1,"quizz Entreprise 2",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=quizz+Entreprise+2,Entreprise
+test2,"Quizz ecole",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+ecole,Ecole,"En cours"
+test2,"Quizz 2 test",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+2+test,Ecole,"En cours"
+test1,"quizz Entreprise",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=quizz+Entreprise,Entreprise,"En cours"
+test1,"quizz Entreprise 2",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=quizz+Entreprise+2,Entreprise,"En cours"
 test2,1,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=1,Ecole,"En cours"
