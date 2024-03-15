@@ -7,3 +7,4 @@ test2,"Quizz Pour p",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+Pour+
 test2,"Quizz Pour p",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+Pour+p,Ecole,"En cours"
 test1,"quizz admin",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=quizz+admin,Entreprise,"En cours"
 test1,"quizz admin",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=quizz+admin,Entreprise,"En cours"
+test2,merde,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=merde,Ecole,"En cours"
