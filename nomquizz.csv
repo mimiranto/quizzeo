@@ -4,3 +4,4 @@ test2,"Quizz 2 test",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+2+tes
 test1,"quizz Entreprise",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=quizz+Entreprise,Entreprise,"En cours"
 test1,"quizz Entreprise 2",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=quizz+Entreprise+2,Entreprise,"En cours"
 test2,1,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=1,Ecole,"En cours"
+test2,"Quizz Capital",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+Capital,Ecole,"En cours"

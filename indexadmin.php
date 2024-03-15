@@ -104,6 +104,7 @@
             margin-top: 25vh;
         }
         .container {
+            padding:2%;
             position: relative;
             white-space: nowrap;
             margin-top:25px;
@@ -172,7 +173,7 @@
         <?php
       }
     }
-    
+
     fclose($file); 
     ?>
     </div>
