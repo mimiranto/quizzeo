@@ -24,7 +24,7 @@ if ($indice ==6){
     <nav> 
         <div id="contenu"> 
             <div> 
-                <img class="logo" src="asset/quizzeo.png"> 
+                <a href='<?php  ?>'><img class="logo" src="asset/quizzeo.png"></a>
             </div>
             <div class='log'> 
                 <a href="./traitement_deco.php" id="inscription">Deconnexion</a> 

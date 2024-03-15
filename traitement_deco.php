@@ -6,7 +6,7 @@ if (isset($_SESSION['id_user'])) {
 
     $lines = file($log_file_name);
 
-    // Vérifier si le fichier a été lu avec succès
+   
     if ($lines !== false) {
         // Parcourir les lignes à l'envers pour trouver la dernière connexion de l'utilisateur
         for ($i = count($lines) - 1; $i >= 0; $i--) {

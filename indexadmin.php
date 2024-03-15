@@ -161,19 +161,18 @@
     $file=fopen("nomquizz.csv","r"); 
     $lines = [];
 
-    while (($line = fgetcsv($file)) !== false) { 
+    while(($data=fgetcsv($file))!==false){ 
+        while(($line = fgetcsv($file)) !== false) { 
         $lines[] = $line;
         ?>
         <form class="slide"> 
-            <p><?php echo $line[0]; ?></p> 
-            <a href="<?php $line[2]?>"><img src="<?php echo $line[1];?>"/></a>
+            <p><?php echo $line[1]; ?></p> 
+            <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
         </form>
         <?php
+      }
     }
-
     
-
-
     fclose($file); 
     ?>
     </div>

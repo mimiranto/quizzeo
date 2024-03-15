@@ -155,7 +155,8 @@
     $file=fopen("nomquizz.csv","r"); 
     $lines = [];
 
-    while (($line = fgetcsv($file)) !== false) { 
+    while(($data=fgetcsv($file))!==false){ // Parcours du fichier CSV des favoris
+        while(($line = fgetcsv($file)) !== false) { // Lecture de chaque ligne du fichier
         $lines[] = $line;
         ?>
         <form class="slide"> 
@@ -165,8 +166,8 @@
          <?php endif; ?>
         </form>
         <?php
+      }
     }
-
     fclose($file); 
     ?>
     </div>

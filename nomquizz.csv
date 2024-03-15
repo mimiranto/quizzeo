@@ -1,4 +1,5 @@
 id_user,id_quizz,image,url,status
-test1,"Quizz 3",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+3,Entreprise
-test1,"Quizz 3",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+3,Entreprise
-test1,"Quizz 3",,$url_quiz,Entreprise
+test2,"Quizz ecole",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+ecole,Ecole
+test2,"Quizz 2 test",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+2+test,Ecole
+test1,"quizz Entreprise",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=quizz+Entreprise,Entreprise
+test1,"quizz Entreprise 2",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=quizz+Entreprise+2,Entreprise

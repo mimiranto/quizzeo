@@ -26,7 +26,7 @@ if (isset($_POST['nom']) && isset($_POST['action'])&& isset($_GET['id'])) { // V
             else{
                 $url=$_POST['nom'];
                 $url_encoded = urlencode($url);
-                $url_quiz = " http://localhost/PHP/Quizzeo/quizzstart.php?bb=$url_encoded ";
+                $url_quiz = "http://localhost/PHP/Quizzeo/quizzstart.php?bb=$url_encoded";
                 $file_name1 = 'nomquizz.csv';
                 $file_y= fopen( $file_name1 , 'a');
                 if (filesize( $file_name1) == 0) { // Vérifie si le fichier est vide
