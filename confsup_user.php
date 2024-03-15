@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACCUEIL</title>
     <style>
@@ -35,11 +36,13 @@
             text-align: center;
             margin-top:18px;
         }
-        .log{
-            margin-top: 13px;
+        .log{          
+            margin-left: 17vw;
         }
  
         #inscription, #connexion {
+            display: flex;
+            justify-content: center;
             display: inline-block;
             padding: 10px 20px;
             background-color: #FFB6C1;
@@ -60,14 +63,24 @@
             justify-content: space-between;
         }
         #txt{
-            color:white;
+           
+            font-family:Impact,fantasy;
             font-size:20px;
             display:flex;
             justify-content: center;
-            flex-direction: column;
+           
             align-items: center;
             margin-top: 25vh;
             letter-spacing: 1px;
+        }
+        #mot{
+            border-radius:30px;
+            background-color: white;
+            width:55%;
+            height:40vh;
+            margin-left:250px;
+            margin-right:250px;
+           
         }
     </style>
 </head>
@@ -78,25 +91,19 @@
             <div> <!-- Première partie de la barre de navigation : logo -->
                 <img class="logo" src="asset/quizzeo.png"> <!-- Logo -->
             </div>
-            <div class='log'> <!-- Deuxième partie de la barre de navigation : liens d'inscription et de connexion -->
-                <a href="./inscription.php" id="inscription">Inscription</a> <!-- Lien vers la page d'inscription -->
-                <a href="./login.php" id="connexion">Connexion</a> <!-- Lien vers la page de connexion -->
-            </div>
         </div>
     </nav>
  
-    <div id="txt">
-                <h2>Tu es à l'accueil, tu peux te connecter ou t'inscrire !</h2>
+    <div id="mot">
+                
+                
+                <h2 id="txt">Voulez-vous valider la suppression de votre compte?</h2>
                 <br>
                 <br>
-                <h3>
-                    Quizzeo est une plateforme de quizz en ligne. Le site vous permet de s’inscrire et de choisir si vous êtes utilisateur ou quizzeur, puis de vous connecter.
-                    <br>
-                    <br>
-                    Une fois votre compte créé vous pourrez jouer à des quizzs ou bien créer vos propres quizz en fonction de votre grade.
-                    <br>
-                    <br>
-                </h3>   
+                <div class='log'> <!-- Deuxième partie de la barre de navigation : liens d'inscription et de connexion -->
+                <a href="./sup_user.php" id="inscription">Confirmer</a> <!-- Lien vers la page d'inscription -->
+                <a href="./indexecole.php" id="connexion">Annuler</a> <!-- Lien vers la page de connexion -->
+                </div>
     </div>
  
  
