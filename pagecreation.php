@@ -4,11 +4,33 @@ if (!isset( $_SESSION['nom'])){
     $_SESSION['nom']="";
 }
 if (!isset( $_SESSION['ajouts'])){
-    $_SESSION['ajouts']=1;
+    $_SESSION['ajouts']=0;
 }
 $indice=$_SESSION['ajouts'];
-if ($indice ==6){
+if ($_SESSION['ajouts'] == 0){
     $indice=1 ;
+}
+if ( $_SESSION['ajouts']==6){
+    $quizz=$_SESSION['nom'];
+    $url=$_SESSION['nom'];
+    $_SESSION['nom']="";
+    $url_encoded = urlencode($url);
+    $url_quiz = "http://localhost/PHP/Quizzeo/quizzstart.php?bb=$url_encoded";
+    $file_name1 = 'nomquizz.csv';
+    $file_y= fopen( $file_name1 , 'a');
+    if (filesize( $file_name1) == 0) { // Vérifie si le fichier est vide
+        fputcsv($file_y, [ 'id_user','id_quizz','image','url','status']); // Écrit une ligne d'en-tête CSV si le fichier est vide
+    }
+    fputcsv($file_y,[$_SESSION['id_user'],$quizz,$_POST['image'],$url_quiz,$_SESSION['sat'],"En cours"]);
+    fclose($file_y); 
+    if ($_SESSION['sat'] == 'Ecole'){
+        $_SESSION['ajouts']=1;
+         header('location: ./indexecole.php');
+    }
+    else{
+        $_SESSION['ajouts']=1;
+        header('location: ./indexentreprise.php');
+    }
 }
 
 ?>
@@ -24,7 +46,7 @@ if ($indice ==6){
     <nav> 
         <div id="contenu"> 
             <div> 
-                <a href='<?php  ?>'><img class="logo" src="asset/quizzeo.png"></a>
+                <img class="logo" src="asset/quizzeo.png"> 
             </div>
             <div class='log'> 
                 <a href="./traitement_deco.php" id="inscription">Deconnexion</a> 

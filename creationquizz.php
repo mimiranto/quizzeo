@@ -12,38 +12,19 @@ if (isset($_POST['nom']) && isset($_POST['action'])&& isset($_GET['id'])) { // V
         fputcsv($file, [ 'id_user'.'id_nom', 'id','qst1', 'reponse1', 'reponse2','reponse3','reponse4','point']); // Écrit une ligne d'en-tête CSV si le fichier est vide
     }
     fclose($file); // Ferme le fichier
-
+    
     if ($_POST['action'] == 'Ajouter') { // Vérifie si l'action est d'ajouter une attraction aux favoris
         $file = fopen('quizz.csv', 'a+'); // Ouvre à nouveau le fichier des favoris en mode lecture et écriture
 
-       
-           if($_SESSION['ajouts']<6){
+            
+                if($_SESSION['ajouts']<6){
                 fputcsv($file,[$_POST['nom'],$_GET['id'],$_POST['qst1'],$_POST['reponse1'],$_POST['reponse2'],$_POST['reponse3'],$_POST['reponse4'],$_POST['point']]);
                 $_SESSION['ajouts']++; // Incrémenter le compteur
                 header('location: ./pagecreation.php');
 
-            }
-            else{
-                $url=$_POST['nom'];
-                $url_encoded = urlencode($url);
-                $url_quiz = "http://localhost/PHP/Quizzeo/quizzstart.php?bb=$url_encoded";
-                $file_name1 = 'nomquizz.csv';
-                $file_y= fopen( $file_name1 , 'a');
-                if (filesize( $file_name1) == 0) { // Vérifie si le fichier est vide
-                    fputcsv($file_y, [ 'id_user','id_quizz','image','url','status']); // Écrit une ligne d'en-tête CSV si le fichier est vide
-                }
-                fputcsv($file_y,[$_SESSION['id_user'],$_POST['nom'],$_POST['image'],$url_quiz, $_SESSION['sat']]);
-                fclose($file_y); 
-                if ($_SESSION['sat'] == 'Ecole'){
-                    $_SESSION['ajouts']=0;
-                     header('location: ./indexecole.php');
-                }
-                else{
-                    $_SESSION['ajouts']=0;
-                    header('location: ./indexentreprise.php');
                 }
             
-            } // Logique pour vérifier et ajouter l'attraction aux favoris
+        // Logique pour vérifier et ajouter l'attraction aux favoris
             fclose($file); // Ferme le fichier des favoris
            
         }

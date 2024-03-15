@@ -157,16 +157,15 @@
 
     while(($data=fgetcsv($file))!==false){ // Parcours du fichier CSV des favoris
         while(($line = fgetcsv($file)) !== false) { // Lecture de chaque ligne du fichier
-        $lines[] = $line;
+           if ($line[4] === 'Ecole'){
         ?>
-        <form class="slide"> 
-         <?php if ($line[4] === 'Ecole') : ?>
+             <form class="slide"> 
             <p><?php echo $line[1]; ?></p> 
             <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
-         <?php endif; ?>
-        </form>
+            <input type="submit" name="action" value="<?php echo  $line[5]; ?>"> 
+            </form>
         <?php
-      }
+           }}
     }
     fclose($file); 
     ?>
