@@ -1,3 +1,6 @@
+<?php
+session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,7 +91,6 @@
          text-align:center;
          font-size: 15px;
          color: white;
-         margin-right: 55px;
         }
         h1{
             color:white;
@@ -132,6 +134,23 @@
         .arrow.right {
             right: 0;
         }
+        input[type="submit" i]{
+            margin-top:10px;
+            padding: 10px 20px;
+            background-color: #FFB6C1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        input[type="submit" i]:hover{
+            background-color: #D8BFD8;
+        }
+        form .image-container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-top: 10px; /* Ajustez selon vos besoins */
+        }
         </style>
 </head>
 <body>
@@ -150,7 +169,6 @@
     <h1>Vos Quizz</h1>
     <div class='container'>
     <?php
-    session_start(); 
 
     $file=fopen("nomquizz.csv","r"); 
     $lines = [];
@@ -162,8 +180,10 @@
             <form class="slide" action="activation_quizz.php" method="post"> 
                 <p><?php echo $line[1]; ?></p> 
                 <input type="hidden" name="route" value="<?php echo  $line[1]; ?>"> 
-                <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
-             <input type="submit" name="action" value="<?php echo  $line[5]; ?>"> 
+                <div class="image-container">
+                 <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
+                 <input type="submit" name="action" value="<?php echo  $line[5]; ?>"> 
+                </div>
             </form>
             <?php 
             if ($line[5] === 'Terminer') {
