@@ -1,3 +1,4 @@
 id_user,id_quizz,image,url,role,"En cours"
 test2,"Quizz Test",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+Test,Ecole,"En cours"
 test2,"Test 2",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Test+2,Ecole,"En cours"
+test1,"Test Entreprise",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Test+Entreprise,Entreprise,"En cours"

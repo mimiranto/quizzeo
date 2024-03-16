@@ -151,6 +151,13 @@ session_start();
          align-items: center;
          margin-top: 10px; /* Ajustez selon vos besoins */
         }
+        .btn {
+            display:flex;
+            justify-content:space-between;
+        }
+        #notes:hover{
+            background-color: #D8BFD8;
+        }
         </style>
 </head>
 <body>
@@ -182,7 +189,10 @@ session_start();
                 <input type="hidden" name="route" value="<?php echo  $line[1]; ?>"> 
                 <div class="image-container">
                  <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
+                 <div class="btn">
                  <input type="submit" name="action" value="<?php echo  $line[5]; ?>"> 
+                 <input type="submit" name="view_notes" value="Voir Les Notes" formaction="note.php">
+                 </div>
                 </div>
             </form>
             <?php 
