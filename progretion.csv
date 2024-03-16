@@ -1,5 +1,4 @@
 id_user,nom,ligne,point,etat
-test3,"Quizz Capital",5,7,Terminer
-test3,"Quizz Pour Amine",5,8,Terminer
-test3,"Quizz Pour p",5,9,Terminer
-test1,"quizz admin",5,2,Terminer
+miranto,"Quizz Test",4,2,"En cours"
+test3,"Quizz Test",2,1,"En cours"
+123,"Quizz Test",5,5,Terminer

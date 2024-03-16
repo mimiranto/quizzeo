@@ -160,7 +160,7 @@ session_start();
                 <img class="logo" src="asset/quizzeo.png"> 
             </div>
             <div class='log'> 
-                <a href="./pagecreation.php" id="inscription">Creation</a>
+                <a href="./pagecreation.php" id="inscription">Créez Votre Quizz</a>
                 <a href="./traitement_deco.php" id="inscription">Deconnexion</a> 
             </div>
             

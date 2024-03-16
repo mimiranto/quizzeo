@@ -1,6 +1,6 @@
 id_nom,id,qst1,reponse1,reponse2,reponse3,reponse4,point
-toi,1,sdcsdc,csdcds,amine,,sdcsdcsd,1
-toi,2,sdcsdc,amine,sdcsdc,,sdcsdcsd,1
-toi,3,sdcsdc,aaa,amine,,sdcsdcsd,1
-toi,4,sdcsdc,aaaa,amine,,sdcsdcsd,1
-toi,5,sdcsdc,amine,sdcsdc,,sdcsdcsd,1
+"Quizz Test",1,"Quelle est la capital de la France",Paris,Barcelone,Berne,Madrid,1
+"Quizz Test",2,"Dans Quel Pays je suis ","France ",Allemagne,Belgique,Suisse,1
+"Quizz Test",3,"Dans Quel Ecole est tu",Ipssi,ESGI,3,4,1
+"Quizz Test",4,"Quel est ton nom",Miranto,Karlson,Ezechiel,Stevens,1
+"Quizz Test",5,"Dans Quelle Ville on est ",Paris,Marseille,"Lyon ",SQY,1

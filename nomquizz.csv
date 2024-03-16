@@ -1,9 +1,2 @@
 id_user,id_quizz,image,url,role,statu
-test2,"Quizz ecole",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+ecole,Ecole,"En cours"
-test2,"Quizz Capital",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+Capital,Ecole,"En cours"
-test2,"Quizz Pour Amine",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+Pour+Amine,Ecole,"En cours"
-test2,"Quizz 16",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+16,Ecole,"En cours"
-test2,"Quizz Pour p",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+Pour+p,Ecole,"En cours"
-test2,"Quizz Pour p",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+Pour+p,Ecole,"En cours"
-test1,"quizz admin",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=quizz+admin,Entreprise,"En cours"
-test1,"quizz admin",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=quizz+admin,Entreprise,"En cours"
+test2,"Quizz Test",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+Test,Ecole,"En cours"

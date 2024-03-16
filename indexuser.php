@@ -196,7 +196,20 @@
         $lines[] = $line;
         ?>
         <form class="slide"> 
-            <p><?php echo $line[1]; ?></p> 
+            <p><?php echo $line[1] ?>
+            <?php
+            $prog_file = fopen("progretion.csv", "r");
+            while (($prog_data = fgetcsv($prog_file)) !== false) {
+            // Supposons que la colonne 1 de progretion.csv correspond à l'ID du quiz
+                if ($prog_data[1] === $line[1]) {
+                    if ($prog_data[0] === $_SESSION['id_user']) {
+                     echo '<p>' . $prog_data[4] . '</p>'; // Afficher l'information dans la colonne 4
+                    }
+                }
+        }
+        fclose($prog_file);
+        ?>
+            </p>
             <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
         </form>
         <?php
