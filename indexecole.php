@@ -134,7 +134,7 @@ session_start();
         .arrow.right {
             right: 0;
         }
-        input[type="submit" i]{
+        input[type="submit" i],#notes{
             margin-top:10px;
             padding: 10px 20px;
             background-color: #FFB6C1;
@@ -145,11 +145,21 @@ session_start();
         input[type="submit" i]:hover{
             background-color: #D8BFD8;
         }
+        input[value="Voir Les Notes"]{
+            text-align:center;
+        }
         form .image-container {
          display: flex;
          flex-direction: column;
          align-items: center;
          margin-top: 10px; /* Ajustez selon vos besoins */
+        }
+        .btn {
+            display:flex;
+            justify-content:space-between;
+        }
+        #notes:hover{
+            background-color: #D8BFD8;
         }
         </style>
 </head>
@@ -177,14 +187,17 @@ session_start();
         while(($line = fgetcsv($file)) !== false) { // Lecture de chaque ligne du fichier
            if ($line[4] === 'Ecole'){
         ?>
-            <form class="slide" action="activation_quizz.php" method="post"> 
-                <p><?php echo $line[1]; ?></p> 
-                <input type="hidden" name="route" value="<?php echo  $line[1]; ?>"> 
-                <div class="image-container">
-                 <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
-                 <input type="submit" name="action" value="<?php echo  $line[5]; ?>"> 
-                </div>
-            </form>
+             <form class="slide" action="activation_quizz.php" method="post"> 
+             <p><?php echo $line[1]; ?></p> 
+             <input type="hidden" name="route" value="<?php echo $line[1]; ?>"> 
+             <div class="image-container">
+             <a href="<?php echo $line[3]; ?>"><img src="<?php echo $line[2]; ?>"/></a>
+             <div class="btn">
+                <input type="submit" name="action" value="<?php echo $line[5]; ?>">
+                <input type="submit" name="view_notes" value="Voir Les Notes" formaction="note.php">
+            </div>
+            </div>
+         </form>
             <?php 
             if ($line[5] === 'Terminer') {
                 $file_d=fopen("progretion.csv","r"); 
@@ -203,11 +216,8 @@ session_start();
            }}
     }
 }
-    fclose($file); 
     ?>
     </div>
-
-    
 
     <!-- Flèches de navigation -->
     <div class="arrow left" onclick="scrollLeft()">&#10094;</div>

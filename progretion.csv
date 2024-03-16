@@ -1,4 +1,7 @@
 id_user,nom,ligne,point,etat
 miranto,"Quizz Test",4,2,"En cours"
 test3,"Quizz Test",2,1,"En cours"
-123,"Quizz Test",5,5,Terminer
+123,"Quizz Test",5,6,Terminé
+miranto,"Test 2",5,2,Terminé
+ib,"Quizz Test",5,5,Terminé
+ib,"Test 2",5,3,Terminé

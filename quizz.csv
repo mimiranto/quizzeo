@@ -4,3 +4,9 @@ id_nom,id,qst1,reponse1,reponse2,reponse3,reponse4,point
 "Quizz Test",3,"Dans Quel Ecole est tu",Ipssi,ESGI,3,4,1
 "Quizz Test",4,"Quel est ton nom",Miranto,Karlson,Ezechiel,Stevens,1
 "Quizz Test",5,"Dans Quelle Ville on est ",Paris,Marseille,"Lyon ",SQY,1
+"Test 2",1,te,1,2,3,4,1
+"Test 2",1,1,2,1,3,4,1
+"Test 2",2,1,2,3,4,5,1
+"Test 2",3,1,2,3,4,5,1
+"Test 2",4,1,2,3,4,5,1
+"Test 2",5,1,2,3,4,5,1

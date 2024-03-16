@@ -42,7 +42,7 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
                 header('location: ./quizzstart.php');
 
         } else {
-            $etat='Terminer';
+            $etat='Terminé';
             $file_s=fopen("progretion.csv","r"); 
         while (($data = fgetcsv($file_s)) !== false) {
             $tab1[] = $data;

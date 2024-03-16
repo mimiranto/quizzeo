@@ -92,6 +92,7 @@
          font-size: 15px;
          color: white;
          margin-right: 55px;
+         flex-direction:row;
         }
         h1{
             color:white;
@@ -200,7 +201,6 @@
             <?php
             $prog_file = fopen("progretion.csv", "r");
             while (($prog_data = fgetcsv($prog_file)) !== false) {
-            // Supposons que la colonne 1 de progretion.csv correspond à l'ID du quiz
                 if ($prog_data[1] === $line[1]) {
                     if ($prog_data[0] === $_SESSION['id_user']) {
                      echo '<p>' . $prog_data[4] . '</p>'; // Afficher l'information dans la colonne 4
