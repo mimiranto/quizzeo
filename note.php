@@ -63,7 +63,7 @@ session_start();
             margin-top:100px;
         }
         p{
-            font-size:25px;
+            font-size:20px;
         }
     </style>
 </head>
@@ -72,7 +72,7 @@ session_start();
     <nav> 
         <div id="contenu"> 
             <div> 
-                <img class="logo" src="asset/quizzeo.png"> 
+             <a href="accueil.php"><img class="logo" src="asset/quizzeo.png"></a>
             </div>
             <div class='log'> 
             <a href="./traitement_deco.php" id="inscription">Deconnexion</a>    
