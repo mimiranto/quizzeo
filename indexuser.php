@@ -195,28 +195,48 @@
     while(($data=fgetcsv($file))!==false){ 
         while(($line = fgetcsv($file)) !== false) { 
         $lines[] = $line;
+        if ($line[5] === "Lancer") {
         ?>
-        <form class="slide"> 
+        
+           
             <?php
+            $tre=false;
             $prog_file = fopen("progretion.csv", "r");
             while (($prog_data = fgetcsv($prog_file)) !== false) {
                 if ($prog_data[1] === $line[1]) {
-                    if ($prog_data[0] === $_SESSION['id_user'] && $prog_data[4] != "Terminé" && $line[5] === "Lancer") {
-                     echo '<p>' . $line[1]. '</p>';
-                     echo '<p>' . $prog_data[4] . '</p>';
-                     ?><a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
-                      <?php
-                      }// Afficher l'information dans la colonne 4
-                    
+                    $lin='<p>' . $prog_data[4] . '</p>';
+                    if ($prog_data[0] === $_SESSION['id_user'] && $prog_data[4] == "Terminé") {
+                        $tre= true; 
+                        break;
+                        
+                      }
+   
+                  
                 }
         }
         fclose($prog_file);
-        ?>
-           
+        if (!$tre){?>
+        <form class="slide"> 
+            <p><?php echo $line[1] ?></p>
+            <p><?php $prog_file1 = fopen("progretion.csv", "r");
+            while (($prog_data1 = fgetcsv($prog_file1)) !== false) {
+                if ($prog_data1[1] === $line[1]) {
+                    if ($prog_data1[0] === $_SESSION['id_user'] && $prog_data1[4] != "Terminé")  {
+                         echo  '<p>' . $prog_data1[4] . '</p>';
+                         break;
+
+                    }}
+                  
+                }  fclose($prog_file1);?></p>
+            <p>
+            <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
+            </p>
         </form>
         <?php
-      }
+        }?><?php
     }
+    }}
+    
 
     fclose($file); 
     ?>

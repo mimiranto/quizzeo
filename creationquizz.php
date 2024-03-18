@@ -16,7 +16,7 @@ if (isset($_POST['nom']) && isset($_POST['action'])&& isset($_GET['id'])) { // V
     if ($_POST['action'] == 'Ajouter') { // Vérifie si l'action est d'ajouter une attraction aux favoris
         $file = fopen('quizz.csv', 'a+'); // Ouvre à nouveau le fichier des favoris en mode lecture et écriture
 
-            
+        
                 if($_SESSION['ajouts']<6){
                 fputcsv($file,[$_POST['nom'],$_GET['id'],$_POST['qst1'],$_POST['reponse1'],$_POST['reponse2'],$_POST['reponse3'],$_POST['reponse4'],$_POST['point']]);
                 $_SESSION['ajouts']++; // Incrémenter le compteur
