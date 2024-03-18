@@ -35,14 +35,23 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
                    }
                }
            }
+           $file_e=fopen("quizz.csv","r"); 
+           while (($data4 = fgetcsv($file_e)) !== false) {
+                if($data4[0] == $_SESSION['nom']){
+                     $tab4[] = $data4;
+                    
+            }
+        }
+           fclose($file_e);
+           $nb_ligen=count($tab4);
 
-        if ($_SESSION['ligne'] < 5) {
+        if ($_SESSION['ligne'] < $nb_ligen) {
            // Si le choix n'est pas trouvé
                 $_SESSION['ligne']++;
                 header('location: ./quizzstart.php');
 
         } else {
-            $etat='Terminer';
+            $etat='Terminé';
             $file_s=fopen("progretion.csv","r"); 
         while (($data = fgetcsv($file_s)) !== false) {
             $tab1[] = $data;
@@ -76,7 +85,10 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
             fclose($file_p);
             // header('location: ./indexentreprise.php');
        }
-
+       if(isset($_SESSION['ligne']) &&isset($_SESSION['Point']) ) {
+        unset($_SESSION['ligne']);
+        unset($_SESSION['Point']);
+        }
             if ($_SESSION['sat'] == 'Ecole'){
 
                   header('location: ./fin.php');
@@ -95,7 +107,7 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
     }
     elseif ($_POST['action'] == 'Accueil') {
             $etat= 'En cours';
-
+    
         $file_s=fopen("progretion.csv","r"); 
         while (($data = fgetcsv($file_s)) !== false) {
             $tab1[] = $data;
@@ -123,11 +135,16 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
             // header('location: ./indexentreprise.php');
          }
          else {
+         
             $file_p= fopen("progretion.csv", "a");
              fputcsv($file_p,array($_SESSION['id_user'],$_SESSION['nom'],$_SESSION['ligne'], $_SESSION['Point'],$etat));
             fclose($file_p);
             // header('location: ./indexentreprise.php');
        }
+       if(isset($_SESSION['ligne']) &&isset($_SESSION['Point']) ) {
+        unset($_SESSION['ligne']);
+        unset($_SESSION['Point']);
+    }
          if ($_SESSION['sat'] == 'Ecole'){
          header('location: ./indexecole.php');
         }
@@ -140,5 +157,6 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
         }
 
     }
+    
 
     }    

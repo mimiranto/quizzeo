@@ -1,3 +1,6 @@
+<?php
+session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,7 +91,6 @@
          text-align:center;
          font-size: 15px;
          color: white;
-         margin-right: 55px;
         }
         h1{
             color:white;
@@ -132,6 +134,33 @@
         .arrow.right {
             right: 0;
         }
+        input[type="submit" i],#notes{
+            margin-top:10px;
+            padding: 10px 20px;
+            background-color: #FFB6C1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        input[type="submit" i]:hover{
+            background-color: #D8BFD8;
+        }
+        input[value="Voir Les Notes"]{
+            text-align:center;
+        }
+        form .image-container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-top: 10px; /* Ajustez selon vos besoins */
+        }
+        .btn {
+            display:flex;
+            justify-content:space-between;
+        }
+        #notes:hover{
+            background-color: #D8BFD8;
+        }
         </style>
 </head>
 <body>
@@ -150,7 +179,6 @@
     <h1>Vos Quizz</h1>
     <div class='container'>
     <?php
-    session_start(); 
 
     $file=fopen("nomquizz.csv","r"); 
     $lines = [];
@@ -159,35 +187,37 @@
         while(($line = fgetcsv($file)) !== false) { // Lecture de chaque ligne du fichier
            if ($line[4] === 'Ecole'){
         ?>
-            <form class="slide" action="activation_quizz.php" method="post"> 
-                <p><?php echo $line[1]; ?></p> 
-                <input type="hidden" name="route" value="<?php echo  $line[1]; ?>"> 
-                <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
-             <input type="submit" name="action" value="<?php echo  $line[5]; ?>"> 
-            </form>
+             <form class="slide" action="activation_quizz.php" method="post"> 
+             <p><?php echo $line[1]; ?></p> 
+             <input type="hidden" name="route" value="<?php echo $line[1]; ?>"> 
+             <div class="image-container">
+             <a href="<?php echo $line[3]; ?>"><img src="<?php echo $line[2]; ?>"/></a>
+             <div class="btn">
+                <input type="submit" name="action" value="<?php echo $line[5]; ?>">
+                <input type="submit" name="view_notes" value="Voir Les Notes" formaction="note.php">
+            </div>
+            </div>
+         </form>
             <?php 
-            if ($line[5] === 'Terminer') {
-                $file_d=fopen("progretion.csv","r"); 
-                $lines = [];
-            while(($data=fgetcsv($file_d))!==false){ // Parcours du fichier CSV des favoris
-                while(($line1 = fgetcsv($file_d)) !== false) { 
-                    if($line1[1]==$line[1]){// Lecture de chaque ligne du fichier
-                        if ($line1[4] === 'Terminer'){
-                            echo ''.$line1[0].''.$line1[3];
+            // if ($line[5] === 'Terminer') {
+            //     $file_d=fopen("progretion.csv","r"); 
+            //     $lines = [];
+            // while(($data=fgetcsv($file_d))!==false){ // Parcours du fichier CSV des favoris
+            //     while(($line1 = fgetcsv($file_d)) !== false) { 
+            //         if($line1[1]==$line[1]){// Lecture de chaque ligne du fichier
+            //             if ($line1[4] === 'Terminer'){
+            //                 echo ''.$line1[0].''.$line1[3];
 
-                        }}}
-            }
-            fclose($file_d); 
+            //             }}}
+            // }
+            // fclose($file_d); 
             ?>
         <?php
-           }}
+           }
     }
 }
-    fclose($file); 
     ?>
     </div>
-
-    
 
     <!-- Flèches de navigation -->
     <div class="arrow left" onclick="scrollLeft()">&#10094;</div>

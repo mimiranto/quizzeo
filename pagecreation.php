@@ -46,7 +46,7 @@ if ( $_SESSION['ajouts']==6){
     <nav> 
         <div id="contenu"> 
             <div> 
-                <img class="logo" src="asset/quizzeo.png"> 
+            <a href="accueil.php"><img class="logo" src="asset/quizzeo.png"></a>
             </div>
             <div class='log'> 
                 <a href="./traitement_deco.php" id="inscription">Deconnexion</a> 
@@ -71,6 +71,10 @@ if ( $_SESSION['ajouts']==6){
      <label for="choix"> Point </label>
      <input type="number" name="point" id='ajt' required>
      <input type="submit" name="action" id='ajt' value="Ajouter">
+     </form>
+     <form method="post" action="creationquizz.php">
+     <input type="submit" name="action" id='ajt' value="Enregistre">
+     </form>
      
 </body>
 </html>
