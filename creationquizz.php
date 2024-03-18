@@ -28,4 +28,15 @@ if (isset($_POST['nom']) && isset($_POST['action'])&& isset($_GET['id'])) { // V
             fclose($file); // Ferme le fichier des favoris
            
         }
-    }
+ 
+                
+       
+               
+            }
+            elseif ($_POST['action'] == 'Enregistre') { // Vérifie si l'action est d'ajouter une attraction aux favoris
+            
+                $_SESSION['ajouts']=6;
+                header('location: ./pagecreation.php');
+
+                }
+    

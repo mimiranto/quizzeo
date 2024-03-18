@@ -135,7 +135,7 @@ nav img {
     if (isset($_GET['bb'])){
         $_SESSION['nom']=$_GET['bb'];
     }
-    if (!isset( $_SESSION['ligne'])&&!isset(  $_SESSION['Point'])){
+    if (!isset( $_SESSION['ligne'])&&!isset( $_SESSION['Point'])){
         $file_r=fopen("progretion.csv","r"); 
         $found=false;
         while(($pro=fgetcsv($file_r))!==false){

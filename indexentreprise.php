@@ -196,21 +196,21 @@ session_start();
                 </div>
             </form>
             <?php 
-            if ($line[5] === 'Terminer') {
-                $file_d=fopen("progretion.csv","r"); 
-                $lines = [];
-            while(($data=fgetcsv($file_d))!==false){ // Parcours du fichier CSV des favoris
-                while(($line1 = fgetcsv($file_d)) !== false) { 
-                    if($line1[1]==$line[1]){// Lecture de chaque ligne du fichier
-                        if ($line1[4] === 'Terminer'){
-                            echo ''.$line1[0].''.$line1[3];
+            // if ($line[5] === 'Terminer') {
+            //     $file_d=fopen("progretion.csv","r"); 
+            //     $lines = [];
+            // while(($data=fgetcsv($file_d))!==false){ // Parcours du fichier CSV des favoris
+            //     while(($line1 = fgetcsv($file_d)) !== false) { 
+            //         if($line1[1]==$line[1]){// Lecture de chaque ligne du fichier
+            //             if ($line1[4] === 'Terminer'){
+            //                 echo ''.$line1[0].''.$line1[3];
 
-                        }}}
-            }
-            fclose($file_d); 
+            //             }}}
+            // }
+            // fclose($file_d); 
             ?>
         <?php
-           }}
+           }
     }
 }
     fclose($file); 
