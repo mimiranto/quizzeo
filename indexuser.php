@@ -201,7 +201,7 @@
             $prog_file = fopen("progretion.csv", "r");
             while (($prog_data = fgetcsv($prog_file)) !== false) {
                 if ($prog_data[1] === $line[1]) {
-                    if ($prog_data[0] === $_SESSION['id_user'] && $prog_data[4] != "Terminé") {
+                    if ($prog_data[0] === $_SESSION['id_user'] && $prog_data[4] != "Terminé" && $line[5] === "Lancer") {
                      echo '<p>' . $line[1]. '</p>';
                      echo '<p>' . $prog_data[4] . '</p>';
                      ?><a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>

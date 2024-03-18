@@ -1,9 +1,9 @@
 id_user,id_quizz,image,url,role,"En cours"
-test2,"Quizz Test",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+Test,Ecole,Terminer
-test2,"Test 2",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Test+2,Ecole,"En cours"
-test1,"Test Entreprise",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Test+Entreprise,Entreprise,"En cours"
+test2,"Quizz Test",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+Test,Ecole,"Lancer"
+test2,"Test 2",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Test+2,Ecole,"Lancer"
+test1,"Test Entreprise",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Test+Entreprise,Entreprise,"Lancer"
 test2,"Quizz 17/03 ",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Quizz+17%2F03+,Ecole,Terminer
-test2,rakotobe,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=rakotobe,Ecole,"En cours"
+test2,rakotobe,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=rakotobe,Ecole,Lancer
 test2,rakotobe,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=rakotobe,Ecole,"En cours"
 test2,"test 18:46",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=test+18%3A46,Ecole,"En cours"
 test1,"Test 50",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Test+50,Entreprise,"En cours"
