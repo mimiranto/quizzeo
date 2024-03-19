@@ -30,7 +30,7 @@ if (isset($_POST['nom']) && isset($_POST['action'])&& isset($_GET['id'])) { // V
             if (move_uploaded_file($_FILES['image']['tmp_name'], $destination)) {
                 echo 'Le fichier a été téléchargé avec succès.';
             } 
-
+        }
                 if($_SESSION['ajouts']<6){
                     fputcsv($file,[$_POST['nom'],$_GET['id'],$_POST['qst1'],$_POST['reponse1'],$_POST['reponse2'],$_POST['reponse3'],$_POST['reponse4'],$_POST['point'], $affiche]);
                     $_SESSION['ajouts']++; // Incrémenter le compteur
@@ -41,16 +41,12 @@ if (isset($_POST['nom']) && isset($_POST['action'])&& isset($_GET['id'])) { // V
         // Logique pour vérifier et ajouter l'attraction aux favoris
             fclose($file); // Ferme le fichier des favoris
            
-        }
- 
-                
-       
-               
+   
             }
             elseif ($_POST['action'] == 'Enregistre') { // Vérifie si l'action est d'ajouter une attraction aux favoris
             
                 $_SESSION['ajouts']=6;
                 header('location: ./pagecreation.php');
 
-                }
-            }
+                  }
+}
