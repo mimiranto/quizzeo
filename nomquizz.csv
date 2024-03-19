@@ -1,1 +1,4 @@
 id_user,id_quizz,image,url,role,Etat,Statu
+test2,TOI,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=TOI,Ecole,"En cours",Activer
+test2,you,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=you,Ecole,"En cours",Activer
+test2,"Be ",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Be+,Ecole,"En cours",Activer
