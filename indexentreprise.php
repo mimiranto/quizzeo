@@ -118,29 +118,33 @@ session_start();
             width: 500px;
         }
 
-        .arrow {
-            position: absolute;
-            top: 62%;
-            transform: translateY(-50%);
-            width: 30px;
-            height: 30px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-size: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        
-        }
+        .arrow-container {
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+}
 
-        .arrow.left {
-            left: 0;
-        }
+.arrow.left {
+    left: 700px; /* Ajustez cette valeur selon votre préférence */
+}
 
-        .arrow.right {
-            right: 0;
-        }
+.arrow.right {
+    right: 700px; /* Ajustez cette valeur selon votre préférence */
+}
+
+.arrow {
+    position: absolute;
+    bottom: -30px; /* Ajustez cette valeur selon votre préférence */
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
         input[type="submit" i]{
             margin-top:10px;
             padding: 10px 20px;
@@ -224,8 +228,10 @@ session_start();
     ?>
     </div>
     <!-- Flèches de navigation -->
-    <div class="arrow left" onclick="scrollLeft()">&#10094;</div>
-    <div class="arrow right" onclick="scrollRight()">&#10095;</div>
+    <div class="arrow-container">
+     <div class="arrow left" onclick="scrollLeft()">&#10094;</div>
+     <div class="arrow right" onclick="scrollRight()">&#10095;</div>
+    </div>
 
     <script>
         function scrollLeft() {

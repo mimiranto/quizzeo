@@ -118,7 +118,7 @@ session_start();
         if ($file) {
             while (($line = fgetcsv($file)) !== false) {
                 if ($line[1] === $route) {
-                    echo '<p>' . $line[0] . ': Score '. $line[3] .'/5'.'</p>';
+                    echo '<p>' . $line[0] . ': Score '. $line[3] .' points'.'</p>';
                 }
             }    
         }

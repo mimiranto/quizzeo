@@ -95,6 +95,16 @@
          font-size: 13px;
          color: black;
         }
+        input[type="submit" i]{
+            padding: 10px 20px;
+            background-color: #FFB6C1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        input[type="submit" i]:hover{
+            background-color: #D8BFD8;
+        }
         </style>
 </head>
 <body>
@@ -118,7 +128,8 @@
 
     
     while (($line = fgetcsv($file)) !== false) { 
-    
+        while (($line = fgetcsv($file)) !== false) { 
+
         ?>
         <form action="traitement_activation.php?route=<?php echo $line[3]; ?>" method="post"> 
             <p><?php echo $line[0]; ?></p> 
@@ -129,6 +140,7 @@
         </div> 
         </form>
         <?php
+        }
     }
 
 

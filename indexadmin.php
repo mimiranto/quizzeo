@@ -123,29 +123,33 @@
             width: 450px;
         }
 
-        .arrow {
-            position: absolute;
-            top: 60%;
-            transform: translateY(-50%);
-            width: 30px;
-            height: 30px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-size: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        
-        }
+        .arrow-container {
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+}
 
-        .arrow.left {
-            left: 0;
-        }
+.arrow.left {
+    left: 700px; /* Ajustez cette valeur selon votre préférence */
+}
 
-        .arrow.right {
-            right: 0;
-        }
+.arrow.right {
+    right: 700px; /* Ajustez cette valeur selon votre préférence */
+}
+
+.arrow {
+    position: absolute;
+    bottom: -30px; /* Ajustez cette valeur selon votre préférence */
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
         input[type="submit" i]{
             margin-top:10px;
             padding: 10px 20px;
@@ -197,6 +201,7 @@
             <input type="hidden" name="route" value="<?php echo $line[1]; ?>"> 
             <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
             <div class="btn">
+             <input type="submit" name="action" value="<?php echo $line[5]; ?>">
              <input type="submit"  name="action" value="<?php echo  $line[6]; ?>">
             </div>
         </form>
@@ -209,8 +214,10 @@
     </div>
 
     <!-- Flèches de navigation -->
-    <div class="arrow left" onclick="scrollLeft()">&#10094;</div>
-    <div class="arrow right" onclick="scrollRight()">&#10095;</div>
+    <div class="arrow-container">
+     <div class="arrow left" onclick="scrollLeft()">&#10094;</div>
+     <div class="arrow right" onclick="scrollRight()">&#10095;</div>
+    </div>
 
     <script>
         function scrollLeft() {
