@@ -32,7 +32,7 @@ if ( $_SESSION['ajouts']==6){
         header('location: ./indexentreprise.php');
     }
 }
-
+print_r($indice);
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -157,7 +157,6 @@
     <h1>Liste Quizz</h1>
     <div class='container'>
     <?php
-    session_start(); 
 
     $file=fopen("nomquizz.csv","r"); 
     $lines = [];
@@ -166,9 +165,11 @@
         while(($line = fgetcsv($file)) !== false) { 
         $lines[] = $line;
         ?>
-        <form class="slide"> 
+        <form class="slide" action="activation_quizz.php" method="post" > 
             <p><?php echo $line[1]; ?></p> 
+            <input type="hidden" name="route" value="<?php echo $line[1]; ?>"> 
             <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
+            <input type="submit"  name="action" value="<?php echo  $line[6]; ?>">
         </form>
         <?php
       }
