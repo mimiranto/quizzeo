@@ -1,1 +1,2 @@
 id_user,id_quizz,image,url,role,Etat,Statu
+test1,Test,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Test,Entreprise,Lancer,Activer

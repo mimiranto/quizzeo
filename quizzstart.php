@@ -120,7 +120,7 @@ nav img {
 <nav> 
         <div id="contenu"> 
             <div> 
-                <img class="logo" src="asset/quizzeo.png"> 
+                <a href="accueil.php"><img class="logo" src="asset/quizzeo.png"></a> 
             </div>
             <div class='log'> 
                 <a href="./traitement_deco.php" id="inscription">Deconnexion</a> 
@@ -165,8 +165,8 @@ nav img {
              // Lecture de chaque ligne du fichier
            ?>  
            <form action="traitrement_quizz.php" method="post">
-                
                 <h1>Question <?php echo $_SESSION['ligne']?></h1>
+                <img src='<?php echo $line[8] ?>'>
                 <label for="nom"><?php echo $line[2]?> ? </label>
                 <select name="choix" id="">
                     <?php

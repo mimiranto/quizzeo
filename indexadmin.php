@@ -140,6 +140,28 @@
         .arrow.right {
             right: 0;
         }
+        input[type="submit" i]{
+            margin-top:10px;
+            padding: 10px 20px;
+            background-color: #FFB6C1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        input[type="submit" i]:hover{
+            background-color: #D8BFD8;
+        }
+        form .image-container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-top: 10px; 
+        }
+        .btn {
+            display:flex;
+            justify-content:center;
+            margin-right:44px;
+        }
         </style>
 </head>
 <body>
@@ -169,7 +191,9 @@
             <p><?php echo $line[1]; ?></p> 
             <input type="hidden" name="route" value="<?php echo $line[1]; ?>"> 
             <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
-            <input type="submit"  name="action" value="<?php echo  $line[6]; ?>">
+            <div class="btn">
+             <input type="submit"  name="action" value="<?php echo  $line[6]; ?>">
+            </div>
         </form>
         <?php
       }

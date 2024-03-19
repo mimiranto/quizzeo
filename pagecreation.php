@@ -70,6 +70,8 @@ if ( $_SESSION['ajouts']==6){
      <input type="text" name="reponse4" id='ajt' required>
      <label for="choix"> Point </label>
      <input type="number" name="point" id='ajt' required>
+     <label for="image">Image</label>
+     <input type="file" name="image" id="image" accept="image/*">
      <input type="submit" name="action" id='ajt' value="Ajouter">
      </form>
      <form method="post" action="creationquizz.php">
