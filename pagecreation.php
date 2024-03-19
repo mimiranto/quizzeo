@@ -3,9 +3,7 @@ session_start();
 if (!isset( $_SESSION['nom'])){
     $_SESSION['nom']="";
 }
-if (!isset( $_SESSION['ajouts'])){
-    $_SESSION['ajouts']=0;
-}
+
 $indice=$_SESSION['ajouts'];
 if ($_SESSION['ajouts'] == 0){
     $indice=1 ;
@@ -21,7 +19,7 @@ if ( $_SESSION['ajouts']==6){
     if (filesize( $file_name1) == 0) { // Vérifie si le fichier est vide
         fputcsv($file_y, [ 'id_user','id_quizz','image','url','status']); // Écrit une ligne d'en-tête CSV si le fichier est vide
     }
-    fputcsv($file_y,[$_SESSION['id_user'],$quizz,$_POST['image'],$url_quiz,$_SESSION['sat'],"En cours"]);
+    fputcsv($file_y,[$_SESSION['id_user'],$quizz,$_POST['image'],$url_quiz,$_SESSION['sat'],"En cours","Activer"]);
     fclose($file_y); 
     if ($_SESSION['sat'] == 'Ecole'){
         $_SESSION['ajouts']=1;
@@ -32,7 +30,7 @@ if ( $_SESSION['ajouts']==6){
         header('location: ./indexentreprise.php');
     }
 }
-print_r($indice);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
