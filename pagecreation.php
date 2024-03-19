@@ -19,9 +19,9 @@ if ( $_SESSION['ajouts']==6){
     $file_name1 = 'nomquizz.csv';
     $file_y= fopen( $file_name1 , 'a');
     if (filesize( $file_name1) == 0) { // Vérifie si le fichier est vide
-        fputcsv($file_y, [ 'id_user','id_quizz','asset/quizzeo.png','url','status']); // Écrit une ligne d'en-tête CSV si le fichier est vide
+        fputcsv($file_y, [ 'id_user','id_quizz','image','url','status']); // Écrit une ligne d'en-tête CSV si le fichier est vide
     }
-    fputcsv($file_y,[$_SESSION['id_user'],$quizz,$_POST['asset/quizzeo.png'],$url_quiz,$_SESSION['sat'],"En cours","Activer"]);
+    fputcsv($file_y,[$_SESSION['id_user'],$quizz,$_POST['image'],$url_quiz,$_SESSION['sat'],"En cours","Activer"]);
     fclose($file_y); 
     if ($_SESSION['sat'] == 'Ecole'){
         $_SESSION['ajouts']=1;
@@ -53,7 +53,7 @@ if ( $_SESSION['ajouts']==6){
             </div>
         </div>
     </nav>
-     <form method="post" action="creationquizz.php?id=<?php echo  $indice?>">
+     <form method="post" action="creationquizz.php?id=<?php echo  $indice?>" enctype="multipart/form-data">
      <h1>Création de Quizz</h1>
      <h1>Question <?php echo $indice?>/5</h1>
      <label for="choix"> Nom du Quizz </label>
