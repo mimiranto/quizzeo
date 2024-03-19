@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrateur</title>
+    <title>Accueil | Quizzeo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -70,8 +70,13 @@ session_start();
             justify-content: center;
         }
         form{
-            margin:2%;
+            margin: 2%;
             transition: transform 0.3s ease;
+            border: solid 2px black;
+            padding: 1%;
+            border-radius: 20px;
+            box-shadow: 5px 10px 10px;
+            background-color: #0000003b;
         }
         form a {
             text-decoration:none;
@@ -82,6 +87,16 @@ session_start();
             width: 430px;
             height: 185px;
             padding:1%;
+        }
+        
+        form:hover {
+         transform: scale(1.02);
+         box-shadow: 5px 10px 10px #FFB6C1;
+        }
+        form p{
+         text-align:center;
+         font-size: 15px;
+         color: white;
         }
         
         form:hover {
@@ -99,6 +114,7 @@ session_start();
             margin-top:70px;
         }
         .container {
+            padding:2%;
             position: relative;
             white-space: nowrap;
             margin-top:25px;
@@ -198,24 +214,10 @@ session_start();
             </div>
             </div>
          </form>
-            <?php 
-            // if ($line[5] === 'Terminer') {
-            //     $file_d=fopen("progretion.csv","r"); 
-            //     $lines = [];
-            // while(($data=fgetcsv($file_d))!==false){ // Parcours du fichier CSV des favoris
-            //     while(($line1 = fgetcsv($file_d)) !== false) { 
-            //         if($line1[1]==$line[1]){// Lecture de chaque ligne du fichier
-            //             if ($line1[4] === 'Terminer'){
-            //                 echo ''.$line1[0].''.$line1[3];
-
-            //             }}}
-            // }
-            // fclose($file_d); 
-            ?>
         <?php
            }
+        }
     }
-}
     ?>
     </div>
 

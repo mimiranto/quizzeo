@@ -608,11 +608,9 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
     function validateRecaptcha() {
         var response = grecaptcha.getResponse();
         if (response.length == 0) {
-            // Le reCAPTCHA n'a pas été validé
             alert("Veuillez compléter le CAPTCHA.");
             return false;
         } else {
-            // Le reCAPTCHA a été validé avec succès
             return true;
         }
     }

@@ -9,7 +9,7 @@ if (isset($_POST['nom']) && isset($_POST['action'])&& isset($_GET['id'])) { // V
     $file = fopen($file_name, 'a'); // Ouvre le fichier en mode "ajout" 
 
     if (filesize($file_name) == 0) { // Vérifie si le fichier est vide
-        fputcsv($file, [ 'id_user'.'id_nom', 'id','qst1', 'reponse1', 'reponse2','reponse3','reponse4','point']); // Écrit une ligne d'en-tête CSV si le fichier est vide
+        fputcsv($file, [ 'id_user'.'id_nom', 'id','qst1', 'reponse1', 'reponse2','reponse3','reponse4','point','./asset/quizzeo.png']); // Écrit une ligne d'en-tête CSV si le fichier est vide
     }
     fclose($file); // Ferme le fichier
     

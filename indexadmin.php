@@ -28,8 +28,13 @@
             margin-top:-40px;
         }
         form{
-            margin:2%;
+            margin: 2%;
             transition: transform 0.3s ease;
+            border: solid 2px black;
+            padding: 1%;
+            border-radius: 20px;
+            box-shadow: 5px 10px 10px;
+            background-color: #0000003b;
         }
         form a {
             text-decoration:none;
@@ -44,12 +49,13 @@
         
         form:hover {
          transform: scale(1.02);
+         box-shadow: 5px 10px 10px #FFB6C1;
         }
         form p{
          text-align:center;
          font-size: 15px;
          color: white;
-         margin-right: 55px;
+
         }
         nav {
             background-color: rgb(255,255,255);
@@ -114,7 +120,7 @@
         .slide {
             display: inline-block;
             margin: 0 10px;
-            width: 500px;
+            width: 450px;
         }
 
         .arrow {
@@ -160,7 +166,6 @@
         .btn {
             display:flex;
             justify-content:center;
-            margin-right:44px;
         }
         </style>
 </head>

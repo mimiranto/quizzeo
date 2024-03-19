@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenue</title>
+    <title>Accueil | Quizzeo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -70,8 +70,13 @@ session_start();
             justify-content: center;
         }
         form{
-            margin:2%;
+            margin: 2%;
             transition: transform 0.3s ease;
+            border: solid 2px black;
+            padding: 1%;
+            border-radius: 20px;
+            box-shadow: 5px 10px 10px;
+            background-color: #0000003b;
         }
         form a {
             text-decoration:none;
@@ -86,6 +91,7 @@ session_start();
         
         form:hover {
          transform: scale(1.02);
+         box-shadow: 5px 10px 10px #FFB6C1;
         }
         form p{
          text-align:center;
@@ -99,6 +105,7 @@ session_start();
             margin-top:70px;
         }
         .container {
+            padding:2%;
             position: relative;
             white-space: nowrap;
             margin-top:25px;
