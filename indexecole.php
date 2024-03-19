@@ -129,7 +129,7 @@ session_start();
 
         .arrow {
             position: absolute;
-            top: 55%;
+            top: 64%;
             transform: translateY(-50%);
             width: 30px;
             height: 30px;

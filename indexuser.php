@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,7 +122,7 @@
 
         .arrow {
             position: absolute;
-            top: 75%;
+            top: 85%;
             transform: translateY(-50%);
             width: 30px;
             height: 30px;
@@ -156,12 +159,11 @@
             </div>
             <div class='log'> 
                 <a href="./traitement_deco.php" id="inscription">Deconnexion</a> 
+                <a href="" id="inscription">Gérer le profil</a> 
             </div>
         </div>
     </nav>
     <h1><?php
-        session_start();
-
         // Vérifiez si l'utilisateur est connecté
         if (isset($_SESSION['id_user'])) {
             // Chemin vers le fichier des utilisateurs
