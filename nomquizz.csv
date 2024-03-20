@@ -1,1 +1,2 @@
 id_user,id_quizz,image,url,role,Etat,Statu
+test2,Theme,Asset/tulipa-humilis-fleur-600x450.ico,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Theme,Ecole,"En cours",Activer

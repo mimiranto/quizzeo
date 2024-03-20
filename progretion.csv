@@ -2,3 +2,4 @@ id_user,nom,ligne,point,état
 test1,Capital,4,0,"En cours"
 test1,"Capital 2",2,1,"En cours"
 test1,,2,0,"En cours"
+test2,Theme,2,0,Terminé
