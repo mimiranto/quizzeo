@@ -3,7 +3,7 @@
 session_start();
 
 // Vérifie si les données 'choix' et 'action' sont envoyées via POST et si la session utilisateur est active
-if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'])) {
+if (isset($_POST['action']) || isset($_POST['choix']) && isset($_SESSION['ligne'])) {
 
     if ($_POST['action'] == 'Continuer') { // Vérifie si l'action est de continuer
 

@@ -82,20 +82,25 @@ nav img {
         form {
             margin-bottom: 20px;
         }
-
+        form img{
+            display: flex;
+            align-items: center;
+            width: 300px;
+            margin-left: 230px;
+        }
         label {
             display: block;
-            margin-bottom: 10px;
             font-weight: bold;
         }
 
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
+        .reponse {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
         }
 
         input[type="submit"] {
@@ -105,12 +110,48 @@ nav img {
             background-color: #FFB6C1;
             color: white;
             cursor: pointer;
-            margin-right: 10px;
         }
 
         input[type="submit"]:hover {
             background-color: #D8BFD8;
         }
+        .libre {
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+            box-shadow: 
+        }
+
+        .libre label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .libre input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Styles pour les boutons dans ce formulaire */
+        .libre input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FFB6C1;
+            color: white;
+            cursor: pointer;
+        }
+
+        .libre input[type="submit"]:hover {
+            background-color: #D8BFD8;
+        }
+        
         </style>
 </head>
 <body>
@@ -120,7 +161,7 @@ nav img {
 <nav> 
         <div id="contenu"> 
             <div> 
-                <a href="accueil.php"><img class="logo" src="asset/quizzeo.png"></a> 
+                <img class="logo" src="asset/quizzeo.png" value =''>
             </div>
             <div class='log'> 
                 <a href="./traitement_deco.php" id="inscription">Deconnexion</a> 
@@ -139,7 +180,7 @@ nav img {
         $file_r=fopen("progretion.csv","r"); 
         $found=false;
         while(($pro=fgetcsv($file_r))!==false){
-               if ($_SESSION['id_user'] == $pro[0] && $_SESSION['nom'] == $pro[1]){
+               if ($_SESSION['id_user'] == $pro[0] && $_SESSION['nom1'] == $pro[1]){
                 $_SESSION['ligne'] = $pro[2];
                 $_SESSION['Point']=  $pro[3]; 
                 $found=true;
@@ -169,13 +210,16 @@ nav img {
                 <h1>Question <?php echo $_SESSION['ligne']?></h1>
                 <img src='<?php echo $line[8] ?>'>
                 <label for="nom"><?php echo $line[2]?> ? </label>
-                <select name="choix" id="">
-                    <?php
-                    foreach($option as $options){
-                    echo "<option value=\"$options\">$options</option>";
-                    }
-                    ?>
-                </select>
+                <?php
+                foreach($option as $key => $options) {
+                ?>
+                <div class="reponse">
+                 <input type='radio' name='choix' id='option<?php echo $key ?>' value='<?php echo $options ?>'>
+                 <label for='option<?php echo $key ?>'><?php echo $options ?></label><br>
+                </div>
+                 <?php
+                } 
+            ?>
                 <input type="submit" name="action" id='Accueil' value="Accueil"> 
                 <input type="submit" name="action" id='Continuer' value="Continuer"> 
             
@@ -187,11 +231,13 @@ nav img {
                 <form action="traitrement_quizz.php" method="post">
                      <h1>Question <?php echo $_SESSION['ligne']?></h1>
                      <img src='<?php echo $line[8] ?>'>
-                     <label for="nom"><?php echo $line[2]?> ? </label>
-                     <input type="text" name="choix" id='choix'> 
+                     <div class ='libre'>
+                      <label for="nom"><?php echo $line[2]?> ? </label>
+                      <input type="text" name="choix" id='choix'> 
+                     </div>
                      <input type="submit" name="action" id='Accueil' value="Accueil"> 
-                     <input type="submit" name="action" id='Continuer' value="Continuer"> 
-                 
+                      <input type="submit" name="action" id='Continuer' value="Continuer"> 
+                     </div>
                 </form>
                  <?php
             }

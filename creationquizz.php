@@ -18,7 +18,7 @@ if (isset($_POST['nom']) && isset($_POST['action'])&& isset($_GET['id'])) { // V
         $file = fopen('quizz.csv', 'a+'); // Ouvre à nouveau le fichier des favoris en mode lecture et écriture
             if ($_FILES['image']['error'] === UPLOAD_ERR_OK) {
             // Spécifier le dossier de destination où stocker le fichier téléchargé
-             $uploadDirectory = 'C:\xampp\htdocs\quizzeo\Asset/';
+             $uploadDirectory = 'C:\xampp\htdocs\PHP\Quizzeo\Asset/';
              $chemin="Asset/";
              // Récupérer le nom du fichier téléchargé
             $fileName = $_FILES['image']['name'];
@@ -59,7 +59,7 @@ else {
     else{
         $_SESSION['Type']= 1;
     }
-    $uploadDirectory1 = 'C:\xampp\htdocs\quizzeo\Asset/';
+    $uploadDirectory1 = 'C:\xampp\htdocs\PHP\Quizzeo\Asset/';
     $chemin1="Asset/";
     // Récupérer le nom du fichier téléchargé
    $fileName1 = $_FILES['miniature']['name']; 

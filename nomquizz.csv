@@ -1,10 +1,1 @@
 id_user,id_quizz,image,url,role,Etat,Statu
-test2,TOI,asset/Quizz3.png,http://localhost/PHP/Quizzeo/quizzstart.php?bb=TOI,Ecole,Lancer,Activer
-test2,you,asset/Quizz3.png,http://localhost/PHP/Quizzeo/quizzstart.php?bb=you,Ecole,Lancer,Activer
-test2,"Be ",asset/Quizz3.png,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Be+,Ecole,Lancer,Activer
-test2,"14,25",asset/Quizz3.png,http://localhost/PHP/Quizzeo/quizzstart.php?bb=14%2C25,Ecole,Lancer,Activer
-test1,oezj,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=oezj,Entreprise,"En cours",Activer
-test2,mopuihse,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=mopuihse,Ecole,"En cours",Activer
-test1,"test entreprise",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=test+entreprise,Entreprise,"En cours",Activer
-test1,Capital,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Capital,Entreprise,Lancer,Activer
-test2,,Asset/,http://localhost/PHP/Quizzeo/quizzstart.php?bb=,Ecole,"En cours",Activer
