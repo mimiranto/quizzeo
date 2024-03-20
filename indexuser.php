@@ -162,7 +162,7 @@ session_start();
                 <img class="logo" src="asset/quizzeo.png"> 
             </div>
             <div class='log'> 
-                <a href="" id="inscription">Gérer le profil</a> 
+                <a href="profil.php" id="inscription">Gérer le profil</a> 
                 <a href="./traitement_deco.php" id="inscription">Deconnexion</a> 
             </div>
         </div>
