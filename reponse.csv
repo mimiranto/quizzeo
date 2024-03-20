@@ -1,5 +1,2 @@
 id_user,nom,ligne,qst,reponse
-test2,toi,ligne,"Quel genre de plante",tu
-test2,toi,4,"Il vont ou ?",77
-test2,Theme,1,"Comment vous sentez vous ?",Bien
-test2,Theme,2,"Qu'on vous allez en vacance","nul part "
+test2,Theme,2,"Qu'on vous allez en vacance",

@@ -231,15 +231,17 @@ nav img {
                     ?>  
                     <form action="traitrement_quizz.php" method="post">
                         <h1>Question <?php echo $_SESSION['ligne']?></h1>
-                        <img src='<?php echo $line[8] ?>'>
+                        <div class='libre'>
                         <input type="hidden" name="type" value="<?php echo $line[9]?> "> 
                         <input type="hidden" name="ligne" value="<?php echo $line[1]?>"> 
                         <input type="hidden" name="nom" value="<?php echo $line[2]?>"> 
+                        <img src='<?php echo $line[8] ?>'>
                         <label  for="nom"><?php echo $line[2]?> ? </label>
                         <input type="text" name="choix" id='choix'> 
+            </div>
                         <input type="submit" name="action" id='Accueil' value="Accueil"> 
                         <input type="submit" name="action" id='Continuer' value="Continuer"> 
-                    
+                        </div>
                     </form>
                     <?php
             }
