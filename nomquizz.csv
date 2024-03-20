@@ -7,3 +7,4 @@ test1,oezj,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=oezj,Entreprise,"En c
 test2,mopuihse,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=mopuihse,Ecole,"En cours",Activer
 test1,"test entreprise",,http://localhost/PHP/Quizzeo/quizzstart.php?bb=test+entreprise,Entreprise,"En cours",Activer
 test1,Capital,,http://localhost/PHP/Quizzeo/quizzstart.php?bb=Capital,Entreprise,Lancer,Activer
+test2,,Asset/,http://localhost/PHP/Quizzeo/quizzstart.php?bb=,Ecole,"En cours",Activer

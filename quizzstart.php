@@ -85,17 +85,17 @@ nav img {
 
         label {
             display: block;
+            margin-bottom: 10px;
             font-weight: bold;
         }
 
-        .reponse {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        input[type="radio"] {
-            margin-right: 10px;
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
         }
 
         input[type="submit"] {
@@ -133,7 +133,7 @@ nav img {
     session_start(); // Démarre une session PHP
 
     if (isset($_GET['bb'])){
-        $_SESSION['nom']=$_GET['bb'];
+        $_SESSION['nom1']=$_GET['bb'];
     }
     if (!isset( $_SESSION['ligne'])&&!isset( $_SESSION['Point'])){
         $file_r=fopen("progretion.csv","r"); 
@@ -158,8 +158,9 @@ nav img {
     
     while(($data=fgetcsv($file))!==false){ // Parcours du fichier CSV des favoriss
         while(($line = fgetcsv($file)) !== false) {
-            if($line[0] == $_SESSION['nom']){
+            if($line[0] == $_SESSION['nom1']){
             if($line[1] == $_SESSION['ligne']){
+            if($line[9] == 0){
                 $option=array($line[3], $line[4], $line[5], $line[6]);
                 shuffle($option);
              // Lecture de chaque ligne du fichier
@@ -167,22 +168,34 @@ nav img {
            <form action="traitrement_quizz.php" method="post">
                 <h1>Question <?php echo $_SESSION['ligne']?></h1>
                 <img src='<?php echo $line[8] ?>'>
-                <label for="nom"><?php echo $line[2]?> ? </label><br>
-                <?php
-                foreach($option as $key => $options) {
-                ?>
-                <div class="reponse">
-                 <input type='radio' name='choix' id='option<?php echo $key ?>' value='<?php echo $options ?>'>
-                 <label for='option<?php echo $key ?>'><?php echo $options ?></label><br>
-                </div>
-                 <?php
-                } 
-            ?>
+                <label for="nom"><?php echo $line[2]?> ? </label>
+                <select name="choix" id="">
+                    <?php
+                    foreach($option as $options){
+                    echo "<option value=\"$options\">$options</option>";
+                    }
+                    ?>
+                </select>
                 <input type="submit" name="action" id='Accueil' value="Accueil"> 
                 <input type="submit" name="action" id='Continuer' value="Continuer"> 
-
+            
+           </form>
             <?php
-            }}}
+            }
+            else{
+                ?>  
+                <form action="traitrement_quizz.php" method="post">
+                     <h1>Question <?php echo $_SESSION['ligne']?></h1>
+                     <img src='<?php echo $line[8] ?>'>
+                     <label for="nom"><?php echo $line[2]?> ? </label>
+                     <input type="text" name="choix" id='choix'> 
+                     <input type="submit" name="action" id='Accueil' value="Accueil"> 
+                     <input type="submit" name="action" id='Continuer' value="Continuer"> 
+                 
+                </form>
+                 <?php
+            }
+        }}}
     }  
 
 fclose($file); // Ferme le fichier CSV des favoris

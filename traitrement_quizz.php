@@ -21,7 +21,7 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
    
        // Ferme le fichier CSV des favoris
                fclose($file);
-   
+           
    // Parcourir le tableau pour trouver et modifier la ligne appropriée
            foreach ($tab2 as $value) {
                // Vérifie si la valeur dans la deuxième colonne correspond à $_SESSION['ligne']
@@ -37,7 +37,7 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
            }
            $file_e=fopen("quizz.csv","r"); 
            while (($data4 = fgetcsv($file_e)) !== false) {
-                if($data4[0] == $_SESSION['nom']){
+                if($data4[0] == $_SESSION['nom1']){
                      $tab4[] = $data4;
                     
             }
@@ -60,7 +60,7 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
         $verif=false;
         // Parcourir le tableau pour trouver et modifier la ligne appropriée
         foreach ($tab1 as $key => $value) {
-            if ($value[0] == $_SESSION['id_user'] && $value[1] == $_SESSION['nom'] ) { 
+            if ($value[0] == $_SESSION['id_user'] && $value[1] == $_SESSION['nom1'] ) { 
                 $tab1[$key][2] = $_SESSION['ligne'];
                 $tab1[$key][3] =  $_SESSION['Point'];
                 $tab1[$key][4] =  $etat;
@@ -81,7 +81,7 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
          }
          else {
             $file_p= fopen("progretion.csv", "a");
-             fputcsv($file_p,array($_SESSION['id_user'],$_SESSION['nom'],$_SESSION['ligne'], $_SESSION['Point'],$etat));
+             fputcsv($file_p,array($_SESSION['id_user'],$_SESSION['nom1'],$_SESSION['ligne'], $_SESSION['Point'],$etat));
             fclose($file_p);
             // header('location: ./indexentreprise.php');
        }
@@ -116,7 +116,7 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
         $verif=false;
         // Parcourir le tableau pour trouver et modifier la ligne appropriée
         foreach ($tab1 as $key => $value) {
-            if ($value[0] == $_SESSION['id_user'] && $value[1] == $_SESSION['nom'] ) { 
+            if ($value[0] == $_SESSION['id_user'] && $value[1] == $_SESSION['nom1'] ) { 
                 $tab1[$key][2] = $_SESSION['ligne'];
                 $tab1[$key][3] =  $_SESSION['Point'];
                 $verif=true;
@@ -137,7 +137,7 @@ if (isset($_POST['action']) && isset($_POST['choix']) && isset($_SESSION['ligne'
          else {
          
             $file_p= fopen("progretion.csv", "a");
-             fputcsv($file_p,array($_SESSION['id_user'],$_SESSION['nom'],$_SESSION['ligne'], $_SESSION['Point'],$etat));
+             fputcsv($file_p,array($_SESSION['id_user'],$_SESSION['nom1'],$_SESSION['ligne'], $_SESSION['Point'],$etat));
             fclose($file_p);
             // header('location: ./indexentreprise.php');
        }
