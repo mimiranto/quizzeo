@@ -21,15 +21,12 @@ if (isset($_POST['action']) || isset($_POST['choix']) && isset($_SESSION['ligne'
    
        // Ferme le fichier CSV des favoris
                fclose($file);
-               
-         
-            if ($_POST['type'] == 1) {
-            $filek="reponse.csv";
-            $file_k= fopen($filek, "a");
-            fputcsv($file_k,array($_SESSION['id_user'],$_SESSION['nom1'],$_POST['ligne'],$_POST['nom'],$_POST['choix']));
-                fclose($file_k);
-            }
-           
+               if ($_POST['type'] == 1) {
+                $filek="reponse.csv";
+                $file_k= fopen($filek, "a");
+                fputcsv($file_k,array($_SESSION['id_user'],$_SESSION['nom1'],$_POST['ligne'],$_POST['nom'],$_POST['choix']));
+                   fclose($file_k);
+               }
    // Parcourir le tableau pour trouver et modifier la ligne appropriée
            foreach ($tab2 as $value) {
                // Vérifie si la valeur dans la deuxième colonne correspond à $_SESSION['ligne']

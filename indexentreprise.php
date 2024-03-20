@@ -203,6 +203,7 @@ session_start();
                  <div class="btn">
                  <input type="submit" name="action" value="<?php echo  $line[5]; ?>"> 
                  <input type="submit" name="view_notes" value="Voir Les Notes" formaction="note.php">
+                 <input type="submit" name="view_notes" value="Voir Les Réponse" formaction="reponseecole.php">
                  </div>
                 </div>
             </form>

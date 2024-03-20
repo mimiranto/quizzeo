@@ -1,2 +1,7 @@
 id_user,nom,ligne,qst,reponse
 test2,Theme,2,"Qu'on vous allez en vacance",
+test1,Série,1,"Quel est cette série","Stranger Thing"
+test1,Série,2,"Qui est ce personnage",Rick
+miranto,Série,1,"Quel est cette série","Stranger Things"
+miranto,Série,2,"Qui est ce personnage",Rick
+miranto,Série,3,"Qui est ce personnage",Berlin

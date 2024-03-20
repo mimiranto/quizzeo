@@ -1,3 +1,11 @@
 id_nom,id,qst1,reponse1,reponse2,reponse3,reponse4,point,image,type
 Theme,1,"Comment vous sentez vous ?",1,,,,1,Asset/test1.jpg,1
 Theme,2,"Qu'on vous allez en vacance",oui,,,,1,Asset/test2.jpg,1
+"Quizz Série",1,"Quel est cette série","Stranger Things","La Casa de papel","Outer Banks",Berlin,1,Asset/stranger.jpg,0
+"Quizz Série",2,"Qui est ce personnage",Rick,Morty,Gumball,Darwin,1,"Asset/rick and morty.jpg",0
+"Quizz Série",3,"Qui est le personnage au milieu",Berlin,Tokyo,Rio,Madrid,0,Asset/berlin.jpeg,0
+"Quizz Série",4,"Quelle est ce pays",Allemagne,,,,1,Asset/allemagne.jpg,1
+"Quizz Série",5,"Quel est ce Pays",Luxembourg,,,,1,Asset/Flag_of_Luxembourg.svg.png,1
+Série,1,"Quel est cette série","Stranger Things",,,,1,Asset/stranger.jpg,1
+Série,2,"Qui est ce personnage",Rick,,,,0,"Asset/rick and morty.jpg",1
+Série,3,"Qui est ce personnage",Berlin,,,,1,Asset/berlin.jpeg,1
