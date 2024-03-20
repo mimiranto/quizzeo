@@ -85,17 +85,17 @@ nav img {
 
         label {
             display: block;
-            margin-bottom: 10px;
             font-weight: bold;
         }
 
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
+        .reponse {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
         }
 
         input[type="submit"] {
@@ -167,17 +167,19 @@ nav img {
            <form action="traitrement_quizz.php" method="post">
                 <h1>Question <?php echo $_SESSION['ligne']?></h1>
                 <img src='<?php echo $line[8] ?>'>
-                <label for="nom"><?php echo $line[2]?> ? </label>
-                <select name="choix" id="">
-                    <?php
-                    foreach($option as $options){
-                    echo "<option value=\"$options\">$options</option>";
-                    }
-                    ?>
-                </select>
+                <label for="nom"><?php echo $line[2]?> ? </label><br>
+                <?php
+                foreach($option as $key => $options) {
+                ?>
+                <div class="reponse">
+                 <input type='radio' name='choix' id='option<?php echo $key ?>' value='<?php echo $options ?>'>
+                 <label for='option<?php echo $key ?>'><?php echo $options ?></label><br>
+                </div>
+                 <?php
+                } 
+            ?>
                 <input type="submit" name="action" id='Accueil' value="Accueil"> 
                 <input type="submit" name="action" id='Continuer' value="Continuer"> 
-            
 
             <?php
             }}}
