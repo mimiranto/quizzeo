@@ -571,7 +571,7 @@
      <nav> <!-- Balise de navigation -->
         <div id="contenu"> <!-- Conteneur de la barre de navigation -->
             <div> <!-- Première partie de la barre de navigation : logo -->
-                <img class="logo" src="asset/quizzeo.png"> <!-- Logo -->
+                <a href="indexuser.php"><img class="logo" src="asset/quizzeo.png"> </a><!-- Logo -->
             </div>
         </div>
     </nav>
@@ -616,12 +616,21 @@
 </html>
  
 <?php
-// Récupérer les données du formulair
- $id = $_POST['id'];
-$lastname = $_POST['lastname'];
-$firstname = $_POST['firstname'];
-$email = $_POST['email'];
-$password = $_POST['password'];
+// Vérification de l'existence des variables et assignation de valeurs par défaut si elles ne sont pas définies
+if (!isset($id) && !isset($lastname) && !isset($firstname) && !isset($email) && !isset($password)) {
+  $id = "";
+  $lastname = "";
+  $firstname = "";
+  $email = "";
+  $password = "";
+}
+
+// Récupération des valeurs depuis $_POST
+$id = isset($_POST['id']) ? $_POST['id'] : $id;
+$lastname = isset($_POST['lastname']) ? $_POST['lastname'] : $lastname;
+$firstname = isset($_POST['firstname']) ? $_POST['firstname'] : $firstname;
+$email = isset($_POST['email']) ? $_POST['email'] : $email;
+$password = isset($_POST['password']) ? $_POST['password'] : $password;
  
 // Chemin vers le fichier CSV
 $chemin_fichier = 'user.csv';
