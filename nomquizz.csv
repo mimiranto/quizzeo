@@ -1,2 +1,3 @@
 id_user,id_quizz,image,url,role,Etat,Statu
 test1,Série,Asset/,http://localhost/PHP/Quizzeo/quizzstart.php?bb=S%C3%A9rie,Entreprise,Lancer,Activer
+test2,"Quizz Série",Asset/,http://localhost/PHP/Quizzeo/quizzstart.php?bb=,Ecole,Lancer,Activer

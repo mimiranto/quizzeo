@@ -186,7 +186,7 @@ session_start();
                     // Si l'identifiant de l'utilisateur correspond à celui de la session actuelle
                     if ($line[3] === $_SESSION['id_user']) {
                         // Afficher un message de bienvenue avec le nom de l'utilisateur
-                        echo "Bienvenue " . $line[2];
+                        echo "Bienvenue " . $line[1];
                         break; // Sortir de la boucle une fois que l'entrée de l'utilisateur est trouvée
                     }
                 }

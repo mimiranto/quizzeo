@@ -65,7 +65,7 @@ nav img {
 
 .container {
             max-width: 800px;
-            margin: 125px auto;
+            margin: 60px auto;
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -91,6 +91,7 @@ nav img {
         label {
             display: block;
             font-weight: bold;
+            margin-bottom: 6px;
         }
 
         .reponse {
@@ -151,7 +152,14 @@ nav img {
         .libre input[type="submit"]:hover {
             background-color: #D8BFD8;
         }
-        
+        @media screen and (max-width: 432px) {
+            .container{
+                margin-top:80px;
+            }
+            form img{
+                margin-left:23px;
+            }
+        }
         </style>
 </head>
 <body>

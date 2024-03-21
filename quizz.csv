@@ -9,3 +9,6 @@ Theme,2,"Qu'on vous allez en vacance",oui,,,,1,Asset/test2.jpg,1
 Série,1,"Quel est cette série","Stranger Things",,,,1,Asset/stranger.jpg,1
 Série,2,"Qui est ce personnage",Rick,,,,0,"Asset/rick and morty.jpg",1
 Série,3,"Qui est ce personnage",Berlin,,,,1,Asset/berlin.jpeg,1
+,1,"Qu'elle est cette série","Stranger Things","Outer Banks","Breaking Bad","Alice In Borderland",1,Asset/stranger.jpg,0
+,2,"De Quelle Série provient cette Image","Rick Et Morty",Futurama,"Family Guys","Inside Job",1,"Asset/rick and morty.jpg",0
+,3,"Qui est le personnage au milieu",Berlin,Tokyo,Rio,Denver,-1,Asset/berlin.jpeg,0
