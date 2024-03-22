@@ -141,7 +141,16 @@ input[type="text"]{
    if (!isset($_SESSION["num"])){
     $_SESSION['num']=1;
    }
-   
+   if($_SESSION["num"]==6){
+    if ($_SESSION['sat'] == 'Ecole'){
+        $_SESSION['num']=1;
+         header('location: ./indexecole.php');
+    }
+    else{
+        $_SESSION['num']=1;
+        header('location: ./indexentreprise.php');
+    }
+   }
    print_r($_SESSION['num']);
   
     if (!isset($_POST['route'])){
@@ -162,11 +171,11 @@ input[type="text"]{
             while (($line = fgetcsv($file)) !== false) {
                 
                 if ($line[0] == $route) {
-                    if ($line[1]== $_SESSION['num']) {
+                    if ($line[1]== ($_SESSION['num'])) {
                         if($line[9] == 0){
                         ?>     
                         <form class="slide" action="traitement_modification.php" method="post"> 
-                                <h1>Question <?php echo $_SESSION['num']?></h1>
+                                <h1>Question <?php echo ($_SESSION['num'])?></h1>
                                 <input type="hidden" name="quizz" id='ajt' value="<?php echo $route   ?>" >
                                 <label for="choix"> Question  </label>
                                 <input type="text" name="qst" id='ajt' value="<?php echo $line[2]?>" >
@@ -191,7 +200,7 @@ input[type="text"]{
                     }else{
                         ?>     
                         <form class="slide" action="traitement_modification.php" method="post"> 
-                                <h1>Question <?php echo $_SESSION['num']?></h1>
+                                <h1>Question <?php echo( $_SESSION['num'])?></h1>
                                 <label for="image">Image</label>
                                 <img src="" id="preview1" style="max-width: 300px; max-height: 300px;" value="<?php echo $line[8]?>">
                                 <br>

@@ -6,6 +6,8 @@ Quizz Série,1,Quelle est ce pays,Allemagne,Tokyo,Rio,Berlin,1,Asset/stranger.jp
 "Quizz Série",3,"Qui est le personnage au milieu",Berlin,Tokyo,Rio,Madrid,0,Asset/berlin.jpeg,0
 "Quizz Série",4,"Quelle est ce pays",Allemagne,,,,1,Asset/allemagne.jpg,1
 "Quizz Série",5,"Quel est ce Pays",Luxembourg,,,,1,Asset/Flag_of_Luxembourg.svg.png,1
-Série,1,Qui est ce personnage,Rick,1,,,1,Asset/stranger.jpg,1
-Série,2,"Qui est ce personnage",Rick,,,,0,"Asset/rick and morty.jpg",1
-Série,3,"Qui est ce personnage",Berlin,,,,1,Asset/berlin.jpeg,1
+Série,1,Qui est ce personnage 1,Rick,1,,,1,1,1
+Série,2,Qui est ce personnage 2,Rick,,,,0,Asset/rick and morty.jpg,1
+Série,3,Qui est ce personnage 3,Berlin,,,,1,Asset/berlin.jpeg,1
+Série,4,Qui est ce personnage 44,Rick,1,,,1,1,1
+Série,5,Qui est ce personnage 55,Rick,,,,0,Asset/rick and morty.jpg,1
