@@ -155,7 +155,7 @@ session_start();
     cursor: pointer;
 }
 
-        input[type="submit" i],#notes{
+        input[type="submit" i],#notes,button{
             margin-top:10px;
             padding: 10px 20px;
             background-color: #FFB6C1;
@@ -163,7 +163,7 @@ session_start();
             text-decoration: none;
             border-radius: 5px;
         }
-        input[type="submit" i]:hover{
+        input[type="submit" i]:hover ,button:hover{
             background-color: #D8BFD8;
         }
         input[value="Voir Les Notes"]{

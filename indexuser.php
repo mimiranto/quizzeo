@@ -153,6 +153,17 @@ session_start();
             display:flex;
             margin-left:55px;
         }
+       button{
+            margin-top:10px;
+            padding: 10px 20px;
+            background-color: #FFB6C1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+       button:hover{
+            background-color: #D8BFD8;
+        }
         </style>
 </head>
 <body>

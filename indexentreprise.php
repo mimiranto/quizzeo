@@ -145,7 +145,7 @@ session_start();
     align-items: center;
     cursor: pointer;
 }
-        input[type="submit" i]{
+    input[type="submit" i],button{
             margin-top:10px;
             padding: 10px 20px;
             background-color: #FFB6C1;
@@ -153,7 +153,7 @@ session_start();
             text-decoration: none;
             border-radius: 5px;
         }
-        input[type="submit" i]:hover{
+        input[type="submit" i]:hover ,button:hover{
             background-color: #D8BFD8;
         }
         form .image-container {
@@ -196,6 +196,7 @@ session_start();
            if ($line[4] === 'Entreprise'){
         ?>
             <form class="slide" action="activation_quizz.php" method="post"> 
+                <button type="button" onclick="share('<?php echo $line[3];?>','<?php echo $line[1];?>')">Partager</button>
                 <p><?php echo $line[1]; ?></p> 
                 <input type="hidden" name="route" value="<?php echo  $line[1]; ?>"> 
                 <div class="image-container">
@@ -208,7 +209,6 @@ session_start();
                     <input type="submit" name="modification" value="modification" formaction="modification.php">
                  <?php
                 }?>
-                 <button type="button" onclick="share('<?php echo $line[3];?>','<?php echo $line[1];?>')">Partager</button>
                  </div>
                 </div>
             </form>
