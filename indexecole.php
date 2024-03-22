@@ -207,6 +207,7 @@ session_start();
     while(($data=fgetcsv($file))!==false){ // Parcours du fichier CSV des favoris
         while(($line = fgetcsv($file)) !== false) { // Lecture de chaque ligne du fichier
            if ($line[4] === 'Ecole'){
+           
         ?>
              <form class="slide" action="activation_quizz.php" method="post"> 
              <p><?php echo $line[1]; ?></p> 
@@ -216,13 +217,22 @@ session_start();
              <div class="btn">
                 <input type="submit" name="action" value="<?php echo $line[5]; ?>">
                 <input type="submit" name="view_notes" value="Voir Les Notes" formaction="note.php">
+                <?php if($line[5]== "En cours"){?>
+                    <input type="submit" name="modification" value="modification" formaction="modification.php">
+                 <?php
+                }?>
+                <button type="button" onclick="share('<?php echo $line[3];?>','<?php echo $line[1];?>')">Partager</button>
+         
             </div>
             </div>
          </form>
+ 
         <?php
            }
         }
+
     }
+    fclose($file);
     ?>
     </div>
 
@@ -231,6 +241,16 @@ session_start();
      <div class="arrow left" onclick="scrollLeft()">&#10094;</div>
      <div class="arrow right" onclick="scrollRight()">&#10095;</div>
     </div>
+
+
+
+
+    
+
+
+<script>
+
+</script>
 
     <script>
         function scrollLeft() {
@@ -256,6 +276,23 @@ session_start();
                 container.scrollTo({ left: 0, behavior: 'smooth' });
             }
         }
+
+
+
+        function share(url,titre) {
+            if (navigator.share) {
+                navigator.share({
+                title: titre,
+                text: 'Venez jouer a notre quizz',
+                url: url,
+                })
+       
+            } 
+            }
+
+
+
+
     </script>
 </body>
 </html>

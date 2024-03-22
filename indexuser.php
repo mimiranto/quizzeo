@@ -241,7 +241,10 @@ session_start();
                 }  fclose($prog_file1);?></p>
             <p>
             <a href="<?php echo $line[3] ?>"><img src="<?php echo $line[2];?>"/></a>
+            
             </p>
+            <button type="button" onclick="share('<?php echo $line[3];?>','<?php echo $line[1];?>')">Partager</button>
+         
         </form>
         <?php
         }?><?php
@@ -283,6 +286,19 @@ session_start();
                 container.scrollTo({ left: 0, behavior: 'smooth' });
             }
         }
+
+
+
+        function share(url,titre) {
+            if (navigator.share) {
+                navigator.share({
+                title: titre,
+                text: 'Venez jouer a notre quizz',
+                url: url,
+                })
+       
+            } 
+            }
     </script>
 </body>
 </html>

@@ -204,23 +204,15 @@ session_start();
                  <input type="submit" name="action" value="<?php echo  $line[5]; ?>"> 
                  <input type="submit" name="view_notes" value="Voir Les Notes" formaction="note.php">
                  <input type="submit" name="view_notes" value="Voir Les Réponse" formaction="reponseecole.php">
+                 <?php if($line[5]== "En cours"){?>
+                    <input type="submit" name="modification" value="modification" formaction="modification.php">
+                 <?php
+                }?>
+                 <button type="button" onclick="share('<?php echo $line[3];?>','<?php echo $line[1];?>')">Partager</button>
                  </div>
                 </div>
             </form>
-            <?php 
-            // if ($line[5] === 'Terminer') {
-            //     $file_d=fopen("progretion.csv","r"); 
-            //     $lines = [];
-            // while(($data=fgetcsv($file_d))!==false){ // Parcours du fichier CSV des favoris
-            //     while(($line1 = fgetcsv($file_d)) !== false) { 
-            //         if($line1[1]==$line[1]){// Lecture de chaque ligne du fichier
-            //             if ($line1[4] === 'Terminer'){
-            //                 echo ''.$line1[0].''.$line1[3];
-
-            //             }}}
-            // }
-            // fclose($file_d); 
-            ?>
+    
         <?php
            }
     }
@@ -258,6 +250,17 @@ session_start();
                 container.scrollTo({ left: 0, behavior: 'smooth' });
             }
         }
+
+        function share(url,titre) {
+            if (navigator.share) {
+                navigator.share({
+                title: titre,
+                text: 'Venez jouer a notre quizz',
+                url: url,
+                })
+       
+            } 
+            }
     </script>
 </body>
 </html>
